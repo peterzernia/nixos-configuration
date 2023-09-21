@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./boot.nix
       ./hardware-configuration.nix
       ./media.nix
     ];
@@ -11,52 +12,6 @@
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
-
-  # Bootloader.
-  boot.loader = {
-    systemd-boot = {
-      enable = true;
-    };
-    grub = {
-      # Disable grub
-      enable = false;
-      version = 2;
-      efiSupport = true;
-      efiInstallAsRemovable = true;
-      devices = ["nodev"];
-      useOSProber = true;
-      configurationLimit = 5;
-    };
-    efi = {
-      # canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi";
-    };
-  };
-
-  boot.supportedFilesystems = ["ntfs"];
-
-  boot.initrd.kernelModules = ["uas" "usbcore" "usb_storage" "vfat" "nls_cp437" "nls_iso8859_1"];
-  boot.kernelParams = [ "quiet" "splash" ];
-
-  # Enable swap on luks
-  boot.initrd.luks.devices = {
-    "luks-c44ed61b-7f86-40fa-88d2-2edb8754264c" = {
-      device = "/dev/disk/by-uuid/c44ed61b-7f86-40fa-88d2-2edb8754264c";
-      allowDiscards = true;
-      keyFileSize = 4096;
-      keyFile = "/dev/sde";
-      fallbackToPassword = true;
-      preLVM = false;
-    };
-    "luks-8d8d5986-edf8-4ed7-acb9-74915f1f079f" = {
-      device = "/dev/disk/by-uuid/8d8d5986-edf8-4ed7-acb9-74915f1f079f";
-      allowDiscards = true;
-      keyFileSize = 4096;
-      keyFile = "/dev/sde";
-      fallbackToPassword = true;
-      preLVM = false;
-    };
-  };
 
   networking = {
     hostName = "nixos";
