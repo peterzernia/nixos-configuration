@@ -19,7 +19,9 @@
     firewall = {
       allowedTCPPorts = [
         22
-        8080 # qbittorrent webui
+	7878 # radarr
+        8080 # qbittorrent
+	8989 # sonarr
       ];
     };
     extraHosts = ''
@@ -79,9 +81,6 @@
       };
     };
   };
-
-  # Configure console keymap
-  console.keyMap = "dvorak";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

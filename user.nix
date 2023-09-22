@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  console.keyMap = "dvorak";
+
   users.users.peter = {
     isNormalUser = true;
     description = "Peter";
