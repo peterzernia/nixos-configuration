@@ -1,33 +1,42 @@
 {
+  users.groups.media = {};
+  users.users.radarr.extraGroups = [ "media" ];
+  users.users.sonarr.extraGroups = [ "media" ];
+
+  systemd.tmpfiles.rules = [
+    "d /media 0770 - media - -"
+  ];
+
   services = {
     jellyfin = {
       enable = true;
       openFirewall = true;
+      group = "media";
     };
     sonarr = {
       enable = true;
       openFirewall = true;
+      group = "media";
     };
     radarr = {
       enable = true;
       openFirewall = true;
+      group = "media";
     };
-    prowlarr = { enable = true; };
+    prowlarr = {
+      enable = true;
+    };
+    deluge = {
+      enable = true;
+      user = "peter";
+      group = "media";
+      web.enable = true;
+      dataDir = "/media/torrents";
+      config = {
+        enabled_plugins = [ "Label" "WebUi" ];
+        outgoing_interface = "wg-mullvad";
+      };
+    };
   };	
-
-  system.userActivationScripts = {
-    multimediaSetup = {
-      text = ''
-        /run/current-system/sw/bin/setfacl -m u:jellyfin:rx ~/ 
-        /run/current-system/sw/bin/setfacl -m u:sonarr:rx ~/ 
-        /run/current-system/sw/bin/setfacl -m u:radarr:rx ~/ 
-        /run/current-system/sw/bin/setfacl -m u:sonarr:rwx ~/media/shows 
-        /run/current-system/sw/bin/setfacl -m u:radarr:rwx ~/media/movies 
-        /run/current-system/sw/bin/setfacl -m u:sonarr:rwx ~/Downloads 
-        /run/current-system/sw/bin/setfacl -m u:radarr:rwx ~/Downloads 
-      '';
-      deps = [];
-    };
-  };
 }
 

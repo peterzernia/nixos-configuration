@@ -20,7 +20,7 @@
       allowedTCPPorts = [
         22
 	7878 # radarr
-        8080 # qbittorrent
+        8112 # deluge
 	8989 # sonarr
       ];
     };
