@@ -21,14 +21,14 @@
 
   boot.initrd.luks.devices."luks-8d8d5986-edf8-4ed7-acb9-74915f1f079f".device = "/dev/disk/by-uuid/8d8d5986-edf8-4ed7-acb9-74915f1f079f";
 
-  fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/2455-128F";
-      fsType = "vfat";
-    };
-
   fileSystems."/media" =
     { device = "/dev/disk/by-uuid/9e3f6c83-ba13-45c2-92bd-03eac60f7f73";
       fsType = "ext4";
+    };
+
+  fileSystems."/boot/efi" =
+    { device = "/dev/disk/by-uuid/2455-128F";
+      fsType = "vfat";
     };
 
   swapDevices =
