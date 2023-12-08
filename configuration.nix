@@ -12,6 +12,7 @@
   hardware.opengl.driSupport32Bit = true;
 
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
   networking = {
@@ -116,6 +117,10 @@
 
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "DroidSansMono" ]; })
+  ];
+
+  services.udev.packages = [
+    pkgs.android-udev-rules
   ];
 
   system.stateVersion = "22.11";

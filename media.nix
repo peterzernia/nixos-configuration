@@ -27,6 +27,7 @@
     };
     prowlarr = {
       enable = true;
+      openFirewall = true;
     };
     deluge = {
       enable = true;

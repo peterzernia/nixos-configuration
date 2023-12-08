@@ -27,6 +27,16 @@
     ];
   };
 
+  security.sudo.extraRules= [
+    {  users = [ "peter" ];
+      commands = [
+        { command = "ALL" ;
+           options= [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
+
   services = {
     syncthing = {
         enable = true;
