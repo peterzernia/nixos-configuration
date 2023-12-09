@@ -3,6 +3,12 @@
 {
   console.keyMap = "dvorak";
 
+
+  # [TODO]: move me to PC specific folder
+  systemd.tmpfiles.rules = [
+    "d /games 0770 peter - - -"
+  ];
+
   users.users.peter = {
     isNormalUser = true;
     description = "Peter";
@@ -60,3 +66,4 @@
   };
 
 }
+
