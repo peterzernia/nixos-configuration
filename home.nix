@@ -30,14 +30,21 @@ in
 
   home-manager.users.peter = { pkgs, ... }: {
     home.packages = with pkgs; [
-      atool
     ];
 
     programs.fish.enable = true;
     programs.neovim = {
       enable = true;
-      #defaultEditor = true;
-   };
+    };
+
+    programs.kitty = {
+      enable = true;
+      font = {
+        name = "DroidSansMono Nerd Font Mono";
+        size = 10;
+      };
+      theme = "Catppuccin-Macchiato";
+    };
 
     home.activation.config = ''
       ln -sf ${dotfiles}/fish ${home}/.config/fish
