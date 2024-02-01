@@ -6,6 +6,8 @@ let
 in
 
 {
+  imports = [ <home-manager/nixos> ];
+
   users.defaultUserShell = pkgs.fish;
   environment.variables.EDITOR = "nvim";
 

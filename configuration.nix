@@ -4,11 +4,11 @@
   imports =
     [
       <home-manager/nixos>
-      ./boot.nix
-      ./gaming.nix
-      ./hardware-configuration.nix
       ./home.nix
-      ./media.nix
+      ./pc/boot.nix
+      ./pc/gaming.nix
+      ./pc/hardware-configuration.nix
+      ./pc/media.nix
     ];
 
   hardware.opengl.driSupport32Bit = true;
