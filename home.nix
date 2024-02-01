@@ -30,6 +30,7 @@ in
 
   home-manager.users.peter = { pkgs, ... }: {
     home.packages = with pkgs; [
+      tmux
     ];
 
     programs.fish.enable = true;
@@ -49,6 +50,7 @@ in
     home.activation.config = ''
       ln -sf ${dotfiles}/fish ${home}/.config/fish
       ln -sf ${dotfiles}/nvim ${home}/.config/nvim
+      ln -sf ${dotfiles}/tmux ${home}/.config/tmux
     '';
 
     home.stateVersion = "22.11";
