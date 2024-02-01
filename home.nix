@@ -49,6 +49,8 @@ in
 
     home.activation.config = ''
       ln -sf ${dotfiles}/fish ${home}/.config/fish
+      ln -sf ${dotfiles}/i3 ${home}/.config/i3
+      ln -sf ${dotfiles}/i3blocks ${home}/.config/i3blocks
       ln -sf ${dotfiles}/nvim ${home}/.config/nvim
       ln -sf ${dotfiles}/tmux ${home}/.config/tmux
     '';

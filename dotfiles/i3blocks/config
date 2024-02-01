@@ -1,0 +1,34 @@
+[keyboard]
+command=./keyboard.sh
+interval=1
+signal=10
+
+[nm-vpn]
+#init_color=#FFFF00
+#on_color=#00FF00
+command=./nm-vpn.sh
+label=VPN: 
+interval=5
+
+[memory]
+command=./memory.sh
+label=MEM 
+interval=30
+
+[volume]
+command=perl volume
+#LABEL=♪ 
+LABEL=VOL 
+interval=once
+signal=10
+#STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+
+[time]
+command=perl time
+interval=1
+STRFTIME_FORMAT=%Y-%m-%d %H:%M
+TZONES=$DEFAULT_TZ,Brazil/East,Australia/Brisbane,Asia/Calcutta
+TZ_LABELS=,Brazil,AU,Hyderabad
+
