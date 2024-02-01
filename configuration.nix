@@ -4,9 +4,10 @@
   imports =
     [
       ./boot.nix
+      ./gaming.nix
       ./hardware-configuration.nix
+      ./home.nix
       ./media.nix
-      ./user.nix
     ];
 
   hardware.opengl.driSupport32Bit = true;
@@ -54,8 +55,7 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    layout = "us";
-    xkbVariant = "dvorak";
+    layout = "dvorak";
 
     desktopManager = {
       xterm.enable = true;
@@ -74,10 +74,10 @@
       i3 = {
         enable = true;
         extraPackages = with pkgs; [
-          rofi
           i3status
           i3lock
           i3blocks
+          rofi
         ];
       };
     };
@@ -109,6 +109,7 @@
     dig
     git
     gparted
+    lsof
     nodejs
     tmux
     wget
