@@ -5,20 +5,17 @@
    "d /games 0770 peter - - -"
   ];
 
-  users.users.peter = {
-    packages = with pkgs; [
+  home-manager.users.peter = { pkgs, ... }: {
+    home.packages = with pkgs; [
       discord
       heroic
+      mangohud
       sc-controller
       steam
     ];
   };
 
   programs.gamemode.enable = true;
-
-  environment.systemPackages = [
-    pkgs.mangohud
-  ];
 
   # https://nixos.wiki/wiki/Nvidia
   hardware.opengl = {
