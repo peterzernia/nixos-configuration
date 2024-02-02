@@ -1,12 +1,15 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
   vars = import ../../config/variables.nix;
 in
 
 {
-  imports = [ <home-manager/nixos> ];
+  imports = [
+    inputs.home-manager.nixosModules.default
+  ];
 
+  programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
   environment.variables.EDITOR = "nvim";
 
