@@ -12,6 +12,7 @@ in
 
   home-manager.users.peter = { pkgs, ... }: {
     home.packages = with pkgs; [
+      cargo
       git
       gparted
       lsof
