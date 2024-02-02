@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  home = "/home/peter";
-  dotfiles = "/etc/nixos/dotfiles";
+  vars = import ../../config/variables.nix;
 in
 
 {
@@ -31,11 +30,11 @@ in
     };
 
     home.activation.config = ''
-      ln -sf ${dotfiles}/fish ${home}/.config/fish
-      ln -sf ${dotfiles}/i3 ${home}/.config/i3
-      ln -sf ${dotfiles}/i3blocks ${home}/.config/i3blocks
-      ln -sf ${dotfiles}/nvim ${home}/.config/nvim
-      ln -sf ${dotfiles}/tmux ${home}/.config/tmux
+      ln -sf ${vars.dotfilesDir}/fish ${vars.homeDir}/.config/fish
+      ln -sf ${vars.dotfilesDir}/i3 ${vars.homeDir}/.config/i3
+      ln -sf ${vars.dotfilesDir}/i3blocks ${vars.homeDir}/.config/i3blocks
+      ln -sf ${vars.dotfilesDir}/nvim ${vars.homeDir}/.config/nvim
+      ln -sf ${vars.dotfilesDir}/tmux ${vars.homeDir}/.config/tmux
     '';
 
     home.stateVersion = "22.11";
