@@ -29,11 +29,6 @@
       };
       theme = "Catppuccin-Macchiato";
     };
-
-    home.activation.config = ''
-      ln -sf ${vars.dotfilesDir}/i3 ${vars.homeDir}/.config/i3
-      ln -sf ${vars.dotfilesDir}/i3blocks ${vars.homeDir}/.config/i3blocks
-    '';
   };
 
   security.sudo.extraRules= [
@@ -48,18 +43,6 @@
 
   services = {
     blueman = {
-      enable = true;
-    };
-    syncthing = {
-      enable = true;
-      user = "peter";
-      dataDir = "/home/peter/Sync";
-      configDir = "/home/peter/Sync/.config";
-    };
-    mullvad-vpn = {
-      enable = true;
-    };
-    openssh = {
       enable = true;
     };
   };
