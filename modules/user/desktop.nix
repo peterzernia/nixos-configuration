@@ -20,6 +20,22 @@
     ];
   };
 
+  home-manager.users.peter = { pkgs, ... }: {
+    programs.kitty = {
+      enable = true;
+      font = {
+        name = "DroidSansMono Nerd Font Mono";
+        size = 10;
+      };
+      theme = "Catppuccin-Macchiato";
+    };
+
+    home.activation.config = ''
+      ln -sf ${vars.dotfilesDir}/i3 ${vars.homeDir}/.config/i3
+      ln -sf ${vars.dotfilesDir}/i3blocks ${vars.homeDir}/.config/i3blocks
+    '';
+  };
+
   security.sudo.extraRules= [
     {  users = [ "peter" ];
       commands = [
