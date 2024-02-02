@@ -12,7 +12,12 @@ in
 
   home-manager.users.peter = { pkgs, ... }: {
     home.packages = with pkgs; [
+      git
+      gparted
+      lsof
+      nodejs
       tmux
+      yarn
     ];
 
     programs.fish.enable = true;

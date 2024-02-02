@@ -53,5 +53,15 @@
       };
     };
   };	
+
+  networking = {
+    firewall = {
+      allowedTCPPorts = [
+        7878 # radarr
+        8112 # deluge
+        8989 # sonarr
+      ];
+    };
+  };
 }
 
