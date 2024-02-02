@@ -37,6 +37,10 @@ in
     home.stateVersion = "22.11";
   };
 
+  fonts.fonts = with pkgs; [
+    (nerdfonts.override { fonts = [ "DroidSansMono" ]; })
+  ];
+
   services = {
     syncthing = {
       enable = true;
