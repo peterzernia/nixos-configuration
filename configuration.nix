@@ -3,7 +3,6 @@
 {
   imports =
     [
-      ./home.nix
       ./pc
     ];
 
@@ -18,9 +17,9 @@
     firewall = {
       allowedTCPPorts = [
         22
-	      7878 # radarr
+        7878 # radarr
         8112 # deluge
-	      8989 # sonarr
+        8989 # sonarr
       ];
     };
     extraHosts = ''
