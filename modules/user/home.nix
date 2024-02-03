@@ -31,12 +31,14 @@ in
       lsof
       nodejs
       tmux
+      rustc
       yarn
     ];
 
-    programs.fish.enable = true;
     programs.neovim = {
       enable = true;
+      vimAlias = true;
+      viAlias = true;
     };
 
     home.activation.config = ''
