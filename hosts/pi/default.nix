@@ -1,8 +1,10 @@
 {
-imports =
+  imports =
     [
       ../../modules/common
-      ../../modules/user/home.nix
+      ../../modules/user
     ];
+
+    desktopEnv.enable = false;
 }
 
