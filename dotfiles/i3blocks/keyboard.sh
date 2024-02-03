@@ -1,5 +1,11 @@
 #!/usr/bin/env sh
 
-layout=$(setxkbmap -query | awk '/layout/{print $2}')
+variant=$(setxkbmap -query | awk '/variant/{print $2}')
 
-echo "$layout"
+if [ -z "$variant" ]; then
+  layout=$(setxkbmap -query | awk '/layout/{print $2}')
+  echo "$layout"
+else
+  echo "$variant"
+fi
+

@@ -42,7 +42,8 @@
 
     services.xserver = {
       enable = true;
-      layout = "dvorak";
+      xkb.layout = "us";
+      xkb.variant = "dvorak";
 
       desktopManager = {
         xterm.enable = false;

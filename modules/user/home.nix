@@ -49,10 +49,10 @@ in
       ln -sf ${vars.dotfilesDir}/tmux ${vars.homeDir}/.config/tmux
     '';
 
-    home.stateVersion = "22.11";
+    home.stateVersion = "23.11";
   };
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "DroidSansMono" ]; })
   ];
 
