@@ -7,9 +7,10 @@
       ./media.nix
 
       ../../modules/common
-      ../../modules/user/desktop.nix
-      ../../modules/user/home.nix
+      ../../modules/user
     ];
+
+  desktopEnv.enable = true;
 
   hardware.opengl.driSupport32Bit = true;
 
