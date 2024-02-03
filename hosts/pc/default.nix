@@ -2,17 +2,16 @@
   imports =
     [
       ./boot.nix
-      ./gaming.nix
       ./hardware.nix
 
       ../../modules/common
+      ../../modules/gaming
       ../../modules/media
       ../../modules/user
     ];
 
   desktopEnv.enable = true;
-
-  hardware.opengl.driSupport32Bit = true;
+  nvidia.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
