@@ -15,4 +15,16 @@
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+
+  networking = {
+    hostName = "nixos";
+    firewall = {
+      allowedTCPPorts = [
+        22
+      ];
+    };
+    extraHosts = ''
+      192.168.178.24 nextcloud.peterzernia.com
+    '';
+  };
 }
