@@ -4,9 +4,9 @@
       ./boot.nix
       ./gaming.nix
       ./hardware.nix
-      ./media.nix
 
       ../../modules/common
+      ../../modules/media
       ../../modules/user
     ];
 
