@@ -28,7 +28,7 @@
       };
     };
 
-    security.sudo.extraRules= [
+    security.sudo.extraRules = [
       {  users = [ "peter" ];
         commands = [
           { command = "ALL" ;
@@ -38,11 +38,7 @@
       }
     ];
 
-    services = {
-      blueman = {
-        enable = true;
-      };
-    };
+    services.blueman.enable = true;
 
     services.xserver = {
       enable = true;
