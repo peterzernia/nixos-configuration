@@ -3,7 +3,7 @@
 {
   imports =
     [
-      ./pc
+      ./hosts/pc
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

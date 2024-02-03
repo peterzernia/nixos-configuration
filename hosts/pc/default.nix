@@ -6,8 +6,8 @@
       ./hardware.nix
       ./media.nix
 
-      ../modules/user/desktop.nix
-      ../modules/user/home.nix
+      ../../modules/user/desktop.nix
+      ../../modules/user/home.nix
     ];
 
   hardware.opengl.driSupport32Bit = true;

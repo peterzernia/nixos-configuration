@@ -21,7 +21,7 @@
         pc = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
-            ./configuration.nix
+            ./pc.nix
             inputs.home-manager.nixosModules.default
           ];
         };
