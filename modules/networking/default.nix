@@ -6,8 +6,6 @@
       ./home.nix
     ];
 
-  networking.networkmanager.enable = true;
-
   options = {
     hostname = lib.mkOption {
       default = "hostname";
@@ -19,6 +17,7 @@
 
   config = {
     networking = {
+      networkmanager.enable = true;
       hostName = config.hostname;
     };
   };

@@ -1,7 +1,10 @@
 # nixos-configuration
 
-## modules
+## Steps
+1. Install NixOS on any machine and then clone these files into ~/nixos
+2. Run `sudo nixos-rebuild switch --flake ~/nixos#<host>`
 
+## modules
 ### common
 
 ### gaming
@@ -21,8 +24,4 @@ The user module is broken up into the basic default user config
 I would want on most machines with fish, tmux, vim, etc. A desktop
 environment with xfce+i3 can be enabled by adding
 `desktopEnv.enable = true;`
-
-## Steps
-1. Install NixOS on any machine and then clone these files into ~/nixos
-2. Run `sudo nixos-rebuild switch --flake ~/nixos#<host>`
 
