@@ -9,7 +9,6 @@
     home-manager.users.peter = { pkgs, ... }: {
       home.packages = with pkgs; [
         feh
-        ffmpeg
         firefox
         libreoffice
         mullvad-vpn
@@ -38,6 +37,10 @@
         source = ../../dotfiles/i3blocks;
       };
     };
+
+    fonts.packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "DroidSansMono" ]; })
+    ];
 
     security.sudo.extraRules = [
       {
