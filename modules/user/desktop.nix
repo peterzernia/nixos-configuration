@@ -14,6 +14,7 @@
         libreoffice
         mullvad-vpn
         nextcloud-client
+        nixpkgs-fmt
         soulseekqt
         spotify
         vlc
