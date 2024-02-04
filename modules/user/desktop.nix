@@ -12,6 +12,7 @@
         ffmpeg
         firefox
         libreoffice
+        mullvad-vpn
         nextcloud-client
         soulseekqt
         spotify
@@ -84,8 +85,6 @@
       LC_TELEPHONE = "de_DE.UTF-8";
       LC_TIME = "de_DE.UTF-8";
     };
-
-    networking.networkmanager.enable = true;
 
     sound.enable = true;
     hardware.pulseaudio.enable = false;

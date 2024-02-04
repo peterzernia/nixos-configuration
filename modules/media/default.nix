@@ -39,17 +39,17 @@
       config = {
         download_location = "/media/torrents";
         enabled_plugins = [ "Label" ];
-	outgoing_interface = "wg-mullvad";
-	stop_seed_at_ratio = false;
-	max_active_downloading = 1000;
+	      outgoing_interface = "wg-mullvad";
+	      stop_seed_at_ratio = false;
+	      max_active_downloading = 1000;
         max_active_seeding = 1000;
         max_active_limit =  2000;
       };
       authFile = pkgs.writeTextFile {
         name = "deluge-auth";
         text = ''
-	  localclient::10
-	'';
+	        localclient::10
+	      '';
       };
     };
   };	
