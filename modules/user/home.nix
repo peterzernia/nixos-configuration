@@ -1,9 +1,5 @@
 { pkgs, inputs, ... }:
 
-let
-  vars = import ../../config/variables.nix;
-in
-
 {
   imports = [
     inputs.home-manager.nixosModules.default
@@ -28,8 +24,6 @@ in
       cargo
       gcc
       git
-      gparted
-      lsof
       nodejs
       tmux
       rustc
@@ -42,13 +36,18 @@ in
       viAlias = true;
     };
 
-    home.activation.config = ''
-      ln -sf ${vars.dotfilesDir}/fish ${vars.homeDir}/.config/fish
-      ln -sf ${vars.dotfilesDir}/i3 ${vars.homeDir}/.config/i3
-      ln -sf ${vars.dotfilesDir}/i3blocks ${vars.homeDir}/.config/i3blocks
-      ln -sf ${vars.dotfilesDir}/nvim ${vars.homeDir}/.config/nvim
-      ln -sf ${vars.dotfilesDir}/tmux ${vars.homeDir}/.config/tmux
-    '';
+    xdg.configFile.fish = {
+      recursive = true;
+      source = ../../dotfiles/fish;
+    };
+    xdg.configFile.nvim = {
+      recursive = true;
+      source = ../../dotfiles/nvim;
+    };
+    xdg.configFile.tmux = {
+      recursive = true;
+      source = ../../dotfiles/tmux;
+    };
 
     home.stateVersion = "23.11";
   };
@@ -61,15 +60,11 @@ in
     syncthing = {
       enable = true;
       user = "peter";
-      dataDir = "${vars.homeDir}/Sync";
-      configDir = "${vars.homeDir}/Sync/.config";
+      dataDir = /home/peter/Sync;
+      configDir = /home/peter/Sync/.config;
     };
-    mullvad-vpn = {
-      enable = true;
-    };
-    openssh = {
-      enable = true;
-    };
+    mullvad-vpn.enable = true;
+    openssh.enable = true;
   };
 
   home-manager.useGlobalPkgs = true;

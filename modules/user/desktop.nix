@@ -27,6 +27,15 @@
         };
         theme = "Catppuccin-Macchiato";
       };
+
+      xdg.configFile.i3 = {
+        recursive = true;
+        source = ../../dotfiles/i3;
+      };
+      xdg.configFile.i3blocks = {
+        recursive = true;
+        source = ../../dotfiles/i3blocks;
+      };
     };
 
     security.sudo.extraRules = [
