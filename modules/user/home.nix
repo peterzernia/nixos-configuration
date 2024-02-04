@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 let
   vars = import ../../config/variables.nix;
@@ -26,6 +26,7 @@ in
   home-manager.users.peter = { pkgs, ... }: {
     home.packages = with pkgs; [
       cargo
+      gcc
       git
       gparted
       lsof
