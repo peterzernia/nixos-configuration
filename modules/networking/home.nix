@@ -1,6 +1,6 @@
 { config, lib, ... }:
 
-{ 
+{
   options = {
     homeNetwork.enable = lib.mkEnableOption "enable home network settings";
   };

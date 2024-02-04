@@ -16,18 +16,18 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-    
+
       nixosConfigurations = {
         pc = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
-          modules = [ 
+          specialArgs = { inherit inputs; };
+          modules = [
             ./hosts/pc
             inputs.home-manager.nixosModules.default
           ];
         };
         pi = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
-          modules = [ 
+          specialArgs = { inherit inputs; };
+          modules = [
             ./hosts/pi
             inputs.home-manager.nixosModules.default
           ];

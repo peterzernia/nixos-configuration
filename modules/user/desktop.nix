@@ -7,7 +7,7 @@
 
   config = lib.mkIf config.desktopEnv.enable {
     home-manager.users.peter = { pkgs, ... }: {
-      home.packages = with pkgs; [ 
+      home.packages = with pkgs; [
         feh
         ffmpeg
         firefox
@@ -17,7 +17,7 @@
         soulseekqt
         spotify
         vlc
-      ]; 
+      ];
 
       programs.kitty = {
         enable = true;
@@ -39,10 +39,12 @@
     };
 
     security.sudo.extraRules = [
-      {  users = [ "peter" ];
+      {
+        users = [ "peter" ];
         commands = [
-          { command = "ALL" ;
-             options= [ "NOPASSWD" ];
+          {
+            command = "ALL";
+            options = [ "NOPASSWD" ];
           }
         ];
       }

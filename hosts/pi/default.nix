@@ -6,8 +6,8 @@
       ../../modules/user
     ];
 
-    desktopEnv.enable = false;
-    homeNetwork.enable = true;
-    hostname = "pi";
+  desktopEnv.enable = false;
+  homeNetwork.enable = true;
+  hostname = "pi";
 }
 

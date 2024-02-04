@@ -5,7 +5,7 @@
     ];
 
   systemd.tmpfiles.rules = [
-   "d /games 0770 peter - - -"
+    "d /games 0770 peter - - -"
   ];
 
   home-manager.users.peter = { pkgs, ... }: {
