@@ -5,7 +5,7 @@
       ../../modules/user
     ];
 
-    desktopEnv.enable = false;
-    hostname = "macbookpor";
+    desktopEnv.enable = true;
+    hostname = "macbookpro";
 }
 
