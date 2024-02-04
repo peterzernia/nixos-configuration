@@ -52,16 +52,16 @@
     home.stateVersion = "23.11";
   };
 
-  services = {
-    syncthing = {
+  services.syncthing = {
       enable = true;
       user = "peter";
       dataDir = /home/peter/Sync;
       configDir = /home/peter/Sync/.config;
-    };
-    mullvad-vpn.enable = true;
-    openssh.enable = true;
   };
+  # required for wg-mullvad atm
+  networking.resolvconf.enable = false;
+  services.mullvad-vpn.enable = true;
+  services.openssh.enable = true;
 
   home-manager.useGlobalPkgs = true;
 }
