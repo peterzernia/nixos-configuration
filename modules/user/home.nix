@@ -53,12 +53,30 @@
     home.stateVersion = "23.11";
   };
 
-  services.syncthing = {
-      enable = true;
+  services = {
+    syncthing = {
+      enable = false;
       user = "peter";
-      dataDir = /home/peter/Sync;
-      configDir = /home/peter/Sync/.config;
+      dataDir = /home/peter/sync;
+      overrideDevices = true;
+      overrideFolders = true;
+      openDefaultPorts = true;
+      settings = {
+        devices = {
+          "m1" = { id = "TA3QDQ5-WA2RYR3-ZXXYR25-O2I7TE5-T2AIECT-XWDZX73-UY6UF35-SDFBVQN"; };
+          "pi" = { id = "DCIGCJC-UF2VZG6-BW43FOM-SFCJD23-TLEQZTQ-EOOSSQJ-6I7QWL4-XWFAYAK"; };
+          "pixel3" = { id = "LYMLJLT-RMHFUBE-V4R4B3K-TSM75QL-HAI5X7O-ATJ2DIF-36FV6GM-6KEDPQC"; };
+        };
+        folders = {
+          "Notes" = {
+            path = "/home/peter/sync/notes";
+            devices = [ "m1" "pi" "pixel3" ];
+          };
+        };
+      };
+    };
   };
+
   # required for wg-mullvad atm
   networking.resolvconf.enable = false;
   services.mullvad-vpn.enable = true;
