@@ -8,7 +8,6 @@
   config = lib.mkIf config.desktopEnv.enable {
     home-manager.users.peter = { pkgs, ... }: {
       home.packages = with pkgs; [
-        feh
         firefox
         libreoffice
         nextcloud-client

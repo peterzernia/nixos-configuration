@@ -27,6 +27,7 @@
       nodejs
       tmux
       rustc
+      ripgrep
       yarn
     ];
 
