@@ -202,12 +202,6 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Screenshot
-bindsym --release $mod+Print exec import ~/Pictures/screenshot_`date +"%Y_%m_%d_%T"`.png
-
-# Set display
-exec_always feh --bg-scale ~/Pictures/background.png
-
 # Keyboard switching
 bindsym Mod4+space exec "setxkbmap -query | grep -q 'variant:\s*dvorak' && setxkbmap -layout us || setxkbmap -layout us -variant dvorak"
 

@@ -11,7 +11,6 @@
         feh
         firefox
         libreoffice
-        mullvad-vpn
         nextcloud-client
         nixpkgs-fmt
         soulseekqt
@@ -36,6 +35,14 @@
         recursive = true;
         source = ../../dotfiles/i3blocks;
       };
+    };
+
+    # setting up mullvad with home-mananger caused
+    # issue with settings persintance and deluge
+    users.users.peter = {
+      packages = with pkgs; [
+        mullvad-vpn
+      ];
     };
 
     fonts.packages = with pkgs; [
