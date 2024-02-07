@@ -53,25 +53,29 @@
     home.stateVersion = "23.11";
   };
 
-  services = {
-    syncthing = {
-      enable = false;
-      user = "peter";
-      dataDir = /home/peter/sync;
-      overrideDevices = true;
-      overrideFolders = true;
-      openDefaultPorts = true;
-      settings = {
-        devices = {
-          "m1" = { id = "TA3QDQ5-WA2RYR3-ZXXYR25-O2I7TE5-T2AIECT-XWDZX73-UY6UF35-SDFBVQN"; };
-          "pi" = { id = "DCIGCJC-UF2VZG6-BW43FOM-SFCJD23-TLEQZTQ-EOOSSQJ-6I7QWL4-XWFAYAK"; };
-          "pixel3" = { id = "LYMLJLT-RMHFUBE-V4R4B3K-TSM75QL-HAI5X7O-ATJ2DIF-36FV6GM-6KEDPQC"; };
-        };
-        folders = {
-          "Notes" = {
-            path = "/home/peter/sync/notes";
-            devices = [ "m1" "pi" "pixel3" ];
-          };
+  services.syncthing = {
+    user = "peter";
+    dataDir = /home/peter/sync;
+    configDir = /home/peter/sync/.config/syncthing;
+    openDefaultPorts = true;
+    overrideDevices = true;
+    overrideFolders = true;
+    extraFlags = [
+      # required while dataDir & configDir not working correctly
+      "-data=/home/peter/sync"
+      "-config=/home/peter/sync/.config/syncthing"
+    ];
+    settings = {
+      devices = {
+        "m1" = { id = "TA3QDQ5-WA2RYR3-ZXXYR25-O2I7TE5-T2AIECT-XWDZX73-UY6UF35-SDFBVQN"; };
+        "pi" = { id = "DCIGCJC-UF2VZG6-BW43FOM-SFCJD23-TLEQZTQ-EOOSSQJ-6I7QWL4-XWFAYAK"; };
+        "pixel3" = { id = "LYMLJLT-RMHFUBE-V4R4B3K-TSM75QL-HAI5X7O-ATJ2DIF-36FV6GM-6KEDPQC"; };
+        "nixos" = { id = "FYE2OFW-YBGUODS-NAMNIAM-4JGI4BJ-CAZMLE2-OGCFSDN-42WJ25H-2WHYYQZ"; };
+      };
+      folders = {
+        "Notes" = {
+          path = "/home/peter/sync/notes";
+          devices = [ "m1" "pi" "pixel3" "nixos" ];
         };
       };
     };

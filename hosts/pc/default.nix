@@ -12,9 +12,10 @@
     ];
 
   desktopEnv.enable = true;
-  nvidia.enable = true;
   homeNetwork.enable = true;
   hostname = "nixos";
+  nvidia.enable = true;
+  services.syncthing.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
