@@ -46,11 +46,10 @@
       recursive = true;
       source = ../../dotfiles/nvim;
     };
-    xdg.configFile.tmux = {
-      recursive = true;
-      source = ../../dotfiles/tmux;
+    home.file.tmux = {
+      source = ../../dotfiles/tmux/.tmux.conf;
+      target = ".tmux.conf";
     };
-
     home.stateVersion = "23.11";
   };
 
