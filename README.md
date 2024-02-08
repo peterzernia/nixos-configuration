@@ -6,8 +6,14 @@
 3. Install NixOS on new machine
 4. Close these files into ~/nixos
 5. Copy hardware configuration into hosts/<host>
-6. `git add .` may be needed to make new files available to nix store
-6. Run `sudo nixos-rebuild switch` --flake ~/nixos#<host>
+6. Add boot loader config to the new host
+    basic config:
+    ```
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
+    ```
+7. `git add .` may be needed to make new files available to nix store
+8. Run `sudo nixos-rebuild switch` --flake ~/nixos#<host>
 
 ## Steps to install existing host
 1. Install NixOS on any machine
@@ -42,4 +48,9 @@ all of the dependencies will be installed. Language servers, linters,
 formatters, etc must all be installed through AstroNvim. Ex
 `:LspInstall nil_ls` will install the nixos languange server `nil`
 for syntax highlighting
+
+## problems
+### dns
+Setting up macbookpro for the first time, I could connect to wifi,
+but no dns. I had to manually edit /etc/resolv.conf to get connected.
 
