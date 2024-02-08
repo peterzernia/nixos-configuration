@@ -1,6 +1,8 @@
 {
   imports =
     [
+      ./hardware.nix
+
       ../../modules/common
       ../../modules/user
     ];
