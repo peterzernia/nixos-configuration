@@ -21,6 +21,7 @@
 
   home-manager.users.peter = { pkgs, ... }: {
     home.packages = with pkgs; [
+      bind
       cargo
       gcc
       git
