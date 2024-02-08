@@ -62,6 +62,8 @@
 
     services.blueman.enable = true;
 
+    console.keyMap = "dvorak";
+
     services.xserver = {
       enable = true;
       xkb.layout = "us";
