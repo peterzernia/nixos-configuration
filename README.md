@@ -35,3 +35,11 @@ I would want on most machines with fish, tmux, vim, etc. A desktop
 environment with xfce+i3 can be enabled by adding
 `desktopEnv.enable = true;`
 
+## packages
+### nvim
+nvim is using [AstroNvim](https://astronvim.com/). On the first run,
+all of the dependencies will be installed. Language servers, linters,
+formatters, etc must all be installed through AstroNvim. Ex
+`:LspInstall nil_ls` will install the nixos languange server `nil`
+for syntax highlighting
+
