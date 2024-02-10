@@ -42,7 +42,6 @@
       plugins = with pkgs; [
         tmuxPlugins.continuum
         tmuxPlugins.resurrect
-        tmuxPlugins.sensible
       ];
     };
 
