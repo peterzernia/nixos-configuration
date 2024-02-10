@@ -26,7 +26,6 @@
       gcc
       git
       nodejs
-      tmux
       rustc
       ripgrep
       yarn
@@ -36,6 +35,15 @@
       enable = true;
       vimAlias = true;
       viAlias = true;
+    };
+
+    programs.tmux = {
+      enable = true;
+      plugins = with pkgs; [
+        tmuxPlugins.continuum
+        tmuxPlugins.resurrect
+        tmuxPlugins.sensible
+      ];
     };
 
     xdg.configFile.fish = {
