@@ -18,8 +18,8 @@
   config = {
     networking = {
       networkmanager.enable = true;
+      networkmanager.insertNameservers = [ "9.9.9.9" ];
       hostName = config.hostname;
-      nameservers = [ "9.9.9.9" ];
     };
   };
 }
