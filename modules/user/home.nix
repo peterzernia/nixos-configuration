@@ -22,12 +22,12 @@
   home-manager.users.peter = { pkgs, ... }: {
     home.packages = with pkgs; [
       bind
-      cargo
+      cargo # nil_ls
       gcc
       git
-      nodejs
+      nodejs # astronvim ls, formatters, etc
       rustc
-      ripgrep
+      ripgrep # text search in nvim
       yarn
     ];
 

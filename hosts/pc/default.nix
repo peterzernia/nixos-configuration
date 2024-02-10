@@ -12,6 +12,7 @@
     ];
 
   desktopEnv.enable = true;
+  devEnv.enable = true;
   homeNetwork.enable = true;
   hostname = "nixos";
   nvidia.enable = true;
