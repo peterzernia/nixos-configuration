@@ -2,6 +2,7 @@
 
 {
   users.groups.media = { };
+  users.users.peter.extraGroups = [ "media" ];
   users.users.radarr.extraGroups = [ "media" ];
   users.users.sonarr.extraGroups = [ "media" ];
 
