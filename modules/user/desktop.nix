@@ -12,6 +12,7 @@
         libreoffice
         nextcloud-client
         nixpkgs-fmt
+        rclone
         soulseekqt
         spotify
         unzip
@@ -34,6 +35,10 @@
       xdg.configFile.i3blocks = {
         recursive = true;
         source = ../../dotfiles/i3blocks;
+      };
+      xdg.configFile.rclone = {
+        recursive = true;
+        source = ../../dotfiles/rclone;
       };
     };
 
