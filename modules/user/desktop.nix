@@ -14,6 +14,7 @@
         nixpkgs-fmt
         soulseekqt
         spotify
+        unzip
         vlc
       ];
 
