@@ -6,6 +6,7 @@
 
       ../../modules/common
       ../../modules/gaming
+      ../../modules/immich
       ../../modules/media
       ../../modules/networking
       ../../modules/user
