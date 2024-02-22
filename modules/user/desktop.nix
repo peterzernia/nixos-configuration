@@ -12,6 +12,7 @@
         libreoffice
         nextcloud-client
         nixpkgs-fmt
+        powertop
         rclone
         soulseekqt
         spotify
