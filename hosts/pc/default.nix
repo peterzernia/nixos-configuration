@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports =
     [
@@ -20,4 +22,8 @@
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+
+  services.udev.packages = with pkgs; [
+    android-udev-rules
+  ];
 }
