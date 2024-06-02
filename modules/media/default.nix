@@ -46,7 +46,7 @@
       config = {
         download_location = "/media/torrents";
         enabled_plugins = [ "Label" ];
-        outgoing_interface = "wg-mullvad";
+        outgoing_interface = "wg0-mullvad";
         stop_seed_at_ratio = false;
         max_active_downloading = 1000;
         max_active_seeding = 1000;
