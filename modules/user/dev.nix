@@ -8,7 +8,7 @@
   config = lib.mkIf config.devEnv.enable {
     home-manager.users.peter = { pkgs, ... }: {
       home.packages = with pkgs; [
-        awscli
+        # awscli
         docker-compose
         go
         kubectl
