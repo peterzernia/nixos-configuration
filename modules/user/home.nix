@@ -61,6 +61,10 @@
     home.stateVersion = "23.11";
   };
 
+  services.cron = {
+    enable = true;
+  };
+
   services.syncthing = {
     user = "peter";
     dataDir = /home/peter/sync;
