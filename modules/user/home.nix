@@ -21,6 +21,7 @@
 
   home-manager.users.peter = { pkgs, ... }: {
     home.packages = with pkgs; [
+      bat
       bind
       cargo # nil_ls
       gcc
