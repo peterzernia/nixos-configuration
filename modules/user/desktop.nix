@@ -118,7 +118,6 @@
       LC_TIME = "de_DE.UTF-8";
     };
 
-    sound.enable = true;
     hardware.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {

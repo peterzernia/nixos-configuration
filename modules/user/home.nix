@@ -26,6 +26,7 @@
       cargo # nil_ls
       gcc
       git
+      htop
       nodejs # astronvim ls, formatters, etc
       rustc
       ripgrep # text search in nvim
