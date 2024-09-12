@@ -97,7 +97,6 @@
 
   # required for wg-mullvad atm
   networking.resolvconf.enable = false;
-  services.mullvad-vpn.enable = true;
   services.openssh.enable = true;
 
   home-manager.useGlobalPkgs = true;

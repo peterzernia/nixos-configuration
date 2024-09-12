@@ -43,11 +43,8 @@
       };
     };
 
-    # setting up mullvad with home-mananger caused
-    # issue with settings persintance and deluge
     users.users.peter = {
       packages = with pkgs; [
-        mullvad-vpn
       ];
     };
 

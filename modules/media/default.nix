@@ -45,8 +45,9 @@
       declarative = true;
       config = {
         download_location = "/media/torrents";
-        enabled_plugins = [ "Label" ];
-        outgoing_interface = "wg0-mullvad";
+        enabled_plugins = [ "Label"  "ltconfig" ];
+        outgoing_interface = "wg0";
+        incoming_interface = "wg0";
         stop_seed_at_ratio = false;
         max_download_speed = 5120;
         max_active_downloading = 3;
