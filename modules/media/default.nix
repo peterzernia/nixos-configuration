@@ -48,9 +48,10 @@
         enabled_plugins = [ "Label" ];
         outgoing_interface = "wg0-mullvad";
         stop_seed_at_ratio = false;
-        max_active_downloading = 1000;
+        max_download_speed = 5120;
+        max_active_downloading = 3;
         max_active_seeding = 1000;
-        max_active_limit = 2000;
+        max_active_limit = 1003;
       };
       authFile = pkgs.writeTextFile {
         name = "deluge-auth";
