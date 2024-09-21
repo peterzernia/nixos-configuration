@@ -8,6 +8,8 @@
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
   environment.variables.EDITOR = "nvim";
+  console.keyMap = "dvorak";
+
 
   users.users.peter = {
     isNormalUser = true;

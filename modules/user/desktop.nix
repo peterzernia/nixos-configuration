@@ -66,8 +66,6 @@
 
     services.blueman.enable = true;
 
-    console.keyMap = "dvorak";
-
     services = {
       displayManager = {
         defaultSession = "xfce+i3";

@@ -17,8 +17,6 @@
     };
   };
 
-  console.keyMap = "dvorak";
-
   desktopEnv.enable = false;
   hostname = "pi";
 
