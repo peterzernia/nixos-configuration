@@ -24,14 +24,6 @@
       networkmanager.insertNameservers = [ "9.9.9.9" ];
       hostName = config.hostname;
       enableIPv6 = false;
-      wg-quick = {
-        interfaces = {
-          wg0 = {
-            configFile = "/home/peter/sync/notes/nixos-NL-409.conf";
-            autostart = true;
-          };
-        };
-      };
     };
   };
 }
