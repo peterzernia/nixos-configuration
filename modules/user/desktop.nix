@@ -10,7 +10,6 @@
       home.packages = with pkgs; [
         firefox
         libreoffice
-        nextcloud-client
         nixpkgs-fmt
         powertop
         rclone
@@ -121,8 +120,5 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
-
-    # required for nextcloud client
-    services.gnome.gnome-keyring.enable = true;
   };
 }

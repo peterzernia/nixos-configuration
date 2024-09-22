@@ -13,7 +13,6 @@
         ];
       };
       extraHosts = ''
-        192.168.178.24 nextcloud.peterzernia.com
       '';
     };
   };
