@@ -13,7 +13,7 @@
     boot.loader.efi.canTouchEfiVariables = true;
     ```
 7. `git add .` may be needed to make new files available to nix store
-8. Run `sudo nixos-rebuild switch` --flake ~/nixos#<host>
+8. Run `sudo nixos-rebuild switch --flake ~/nixos#<host>`
 
 ## Steps to install existing host
 1. Install NixOS on any machine
