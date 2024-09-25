@@ -84,5 +84,11 @@
       ];
     };
   };
+
+  users.users.peter = {
+    packages = with pkgs; [
+      libnatpmp
+    ];
+  };
 }
 
