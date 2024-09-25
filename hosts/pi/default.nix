@@ -1,3 +1,5 @@
+{ ... }:
+
 {
   imports =
     [
@@ -6,6 +8,7 @@
 
       ../../modules/common
       ../../modules/networking
+      ../../modules/vpn/server
       ../../modules/user
     ];
 
