@@ -11,17 +11,6 @@
     "d /media 0770 - media - -"
   ];
 
-  networking = {
-    wg-quick = {
-      interfaces = {
-        wg0 = {
-          configFile = "/home/peter/sync/notes/nixos-NL-409.conf";
-          autostart = true;
-        };
-      };
-    };
-  };
-
   services = {
     jellyfin = {
       enable = true;

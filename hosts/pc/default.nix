@@ -11,6 +11,7 @@
       ../../modules/media
       ../../modules/networking
       ../../modules/user
+      ../../modules/vpn/client
     ];
 
   desktopEnv.enable = true;
