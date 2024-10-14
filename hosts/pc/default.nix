@@ -21,6 +21,14 @@
   nvidia.enable = true;
   services.syncthing.enable = true;
 
+  networking = {
+    firewall = {
+      allowedTCPPorts = [
+        8384 # syncthing
+      ];
+    };
+  };
+
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 

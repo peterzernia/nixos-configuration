@@ -25,7 +25,7 @@
           name = "DroidSansMono Nerd Font Mono";
           size = 10;
         };
-        theme = "Catppuccin-Macchiato";
+        themeFile = "Catppuccin-Macchiato";
       };
 
       xdg.configFile.i3 = {

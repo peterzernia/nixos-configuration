@@ -49,7 +49,7 @@
         outgoing_interface = "wg0";
         incoming_interface = "wg0";
         stop_seed_at_ratio = false;
-        max_download_speed = 5120;
+        max_download_speed = 10240;
         max_active_downloading = 3;
         max_active_seeding = 1000;
         max_active_limit = 1003;
