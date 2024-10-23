@@ -9,6 +9,7 @@
 
   systemd.tmpfiles.rules = [
     "d /media 0770 - media - -"
+    "d /media2 0770 - media - -"
   ];
 
   services = {
@@ -41,10 +42,10 @@
       user = "peter";
       group = "media";
       web.enable = true;
-      dataDir = "/media/torrents";
+      dataDir = "/media2/torrents";
       declarative = true;
       config = {
-        download_location = "/media/torrents";
+        download_location = "/media2/torrents";
         enabled_plugins = [ "Label"  "ltconfig" ];
         outgoing_interface = "wg0";
         incoming_interface = "wg0";

@@ -29,6 +29,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/media2" =
+    { device = "/dev/disk/by-uuid/ba5e3bdc-dca8-4890-8a9e-19091088351f";
+      fsType = "ext4";
+    };
+
   fileSystems."/boot/efi" =
     {
       device = "/dev/disk/by-uuid/2455-128F";
