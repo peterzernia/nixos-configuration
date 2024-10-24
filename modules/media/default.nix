@@ -10,6 +10,7 @@
   systemd.tmpfiles.rules = [
     "d /media 0770 - media - -"
     "d /media2 0770 - media - -"
+    "d /media3 0770 - media - -"
   ];
 
   services = {
@@ -54,6 +55,7 @@
         max_active_downloading = 3;
         max_active_seeding = 1000;
         max_active_limit = 1003;
+        max_upload_slots = -1;
       };
       authFile = pkgs.writeTextFile {
         name = "deluge-auth";
