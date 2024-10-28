@@ -9,6 +9,7 @@
   users.defaultUserShell = pkgs.fish;
   environment.variables.EDITOR = "nvim";
   console.keyMap = "dvorak";
+  time.timeZone = "Europe/Berlin";
 
 
   users.users.peter = {
@@ -107,4 +108,3 @@
 
   home-manager.useGlobalPkgs = true;
 }
-
