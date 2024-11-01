@@ -64,11 +64,31 @@
         '';
       };
     };
+    grafana = {
+      enable = true;
+      settings = {
+        server = {
+        port = 3001;
+        };
+      };
+    };
+    prometheus = {
+      enable = true;
+      scrapeConfigs = [
+        {
+          job_name = "deluge-exporter";
+          static_configs = [{
+            targets = [ "0.0.0.0:8011" ];
+          }];
+        }
+      ];
+    };
   };
 
   networking = {
     firewall = {
       allowedTCPPorts = [
+        3001 # grafana
         6767 # bazarr
         7878 # radarr
         8112 # deluge
