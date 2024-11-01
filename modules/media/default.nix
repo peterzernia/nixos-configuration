@@ -68,7 +68,8 @@
       enable = true;
       settings = {
         server = {
-        port = 3001;
+        http_port = 3001;
+        http_addr = "0.0.0.0";
         };
       };
     };
