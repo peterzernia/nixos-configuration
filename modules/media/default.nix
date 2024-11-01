@@ -75,6 +75,13 @@
     };
     prometheus = {
       enable = true;
+      retentionTime = "30d";
+      exporters = {
+        node = {
+          enable = true;
+          enabledCollectors = [ "systemd" ];
+        };
+      };
       scrapeConfigs = [
         {
           job_name = "deluge-exporter";
@@ -94,6 +101,7 @@
         7878 # radarr
         8112 # deluge
         8989 # sonarr
+        9090 # prometheus
       ];
     };
   };
