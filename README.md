@@ -28,7 +28,10 @@ The gaming module assumes you have a drive mounted at /games.
 `nvidia.enable = true;` enables support for nvidia graphics cards.
 
 ### media
-The media module assumes you have a drive mounted at /media.
+The media module assumes you have a drive mounted at:
+/media
+/media2
+/media3
 
 ### networking
 Hostname should be set with `hostname = "nixos";`.
@@ -41,6 +44,9 @@ I would want on most machines with fish, tmux, vim, etc. A desktop
 environment with xfce+i3 can be enabled by adding
 `desktopEnv.enable = true;`
 Developer environment can be setup with `devEnv.enable = true;`
+
+### vpn
+Both client and server vpn confings exist here.
 
 ## packages
 ### nvim
