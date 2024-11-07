@@ -43,7 +43,7 @@
       user = "peter";
       group = "media";
       web.enable = true;
-      dataDir = "/media2/torrents";
+      dataDir = "/media/torrents";
       declarative = true;
       config = {
         download_location = "/media2/torrents";
