@@ -35,4 +35,15 @@
   services.udev.packages = with pkgs; [
     android-udev-rules
   ];
+
+  systemd.services.hd-idle = {
+    description = "External HD spin down daemon";
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      # Type = "forking";
+      ExecStart = "${pkgs.hd-idle}/bin/hd-idle -i 0 -a sda -i 300 -a sdd -i 300";
+      User = "root";
+      Environment = "SYSTEMD_LOG_LEVEL=debug";
+    };
+  };
 }
