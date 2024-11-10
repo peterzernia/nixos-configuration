@@ -15,11 +15,14 @@
     ];
 
   desktopEnv.enable = true;
-  devEnv.enable = true;
+  # devEnv.enable = true;
   homeNetwork.enable = true;
   hostname = "nixos";
   nvidia.enable = true;
   services.syncthing.enable = true;
+
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "peter";
 
   networking = {
     firewall = {
@@ -47,5 +50,5 @@
     };
   };
 
-  system.stateVersion = "24";
+  system.stateVersion = "24.05";
 }

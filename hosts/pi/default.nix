@@ -22,4 +22,6 @@
   };
 
   networking.firewall.allowedTCPPorts = [ 80 ];
+
+  system.stateVersion = "24";
 }
