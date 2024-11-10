@@ -15,7 +15,7 @@
     ];
 
   desktopEnv.enable = true;
-  # devEnv.enable = true;
+  devEnv.enable = true;
   homeNetwork.enable = true;
   hostname = "nixos";
   nvidia.enable = true;
@@ -44,7 +44,7 @@
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       # Type = "forking";
-      ExecStart = "${pkgs.hd-idle}/bin/hd-idle -i 0 -a sda -i 300 -a sdd -i 300";
+      ExecStart = "${pkgs.hd-idle}/bin/hd-idle -i 0 -a sda -i 300 -a sdc -i 300";
       User = "root";
       Environment = "SYSTEMD_LOG_LEVEL=debug";
     };
