@@ -20,13 +20,6 @@
             inputs.home-manager.nixosModules.default
           ];
         };
-        pc2 = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/pc2
-            inputs.home-manager.nixosModules.default
-          ];
-        };
         macbookpro = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [

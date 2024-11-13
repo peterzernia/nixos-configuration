@@ -4,7 +4,7 @@
       enable = true;
     };
     efi = {
-      efiSysMountPoint = "/boot/efi";
+      canTouchEfiVariables = true;
     };
   };
 
@@ -15,16 +15,16 @@
 
   # unlock luks drives at boot with USB or password as fallback
   boot.initrd.luks.devices = {
-    "luks-c44ed61b-7f86-40fa-88d2-2edb8754264c" = {
-      device = "/dev/disk/by-uuid/c44ed61b-7f86-40fa-88d2-2edb8754264c";
+    "luks-afba17fa-c951-44ef-bdc9-55639d0afddd" = {
+      device = "/dev/disk/by-uuid/afba17fa-c951-44ef-bdc9-55639d0afddd";
       allowDiscards = true;
       keyFileSize = 4096;
       keyFile = "/dev/sdg";
       fallbackToPassword = true;
       preLVM = false;
     };
-    "luks-8d8d5986-edf8-4ed7-acb9-74915f1f079f" = {
-      device = "/dev/disk/by-uuid/8d8d5986-edf8-4ed7-acb9-74915f1f079f";
+    "luks-cb862741-d080-4c5d-aabd-061aab9df019" = {
+      device = "/dev/disk/by-uuid/cb862741-d080-4c5d-aabd-061aab9df019";
       allowDiscards = true;
       keyFileSize = 4096;
       keyFile = "/dev/sdg";
