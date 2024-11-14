@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let
+  seedingPort = 63571;
+in
 {
   users.groups.media = { };
   users.users.peter.extraGroups = [ "media" ];
@@ -50,12 +53,17 @@
         enabled_plugins = [ "Label"  "ltconfig" ];
         outgoing_interface = "wg0";
         incoming_interface = "wg0";
+        random_port = false;
+        listen_ports = [ seedingPort seedingPort ];
+        upnp = false;
+        natpmp = false;
         stop_seed_at_ratio = false;
         max_download_speed = 10240;
         max_active_downloading = 3;
         max_active_seeding = 1000;
         max_active_limit = 1003;
-        max_upload_slots = -1;
+        max_upload_slots_global = -1;
+        max_connections_global = -1;
       };
       authFile = pkgs.writeTextFile {
         name = "deluge-auth";
@@ -99,9 +107,13 @@
         3001 # grafana
         6767 # bazarr
         7878 # radarr
-        8112 # deluge
+        8112 # deluge-web
         8989 # sonarr
         9090 # prometheus
+        seedingPort
+      ];
+      allowedUDPPorts = [
+        seedingPort
       ];
     };
   };
