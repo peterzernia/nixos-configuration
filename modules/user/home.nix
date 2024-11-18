@@ -19,7 +19,6 @@
         bat
         bind
         cargo # nil_ls
-        fish
         gcc
         git
         htop
