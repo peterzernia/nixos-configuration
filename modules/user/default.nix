@@ -1,3 +1,4 @@
+{ config, ... }
 {
   imports =
     [
@@ -6,13 +7,11 @@
       ./home.nix
     ];
 
-  programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
-  environment.variables.EDITOR = "nvim";
   console.keyMap = "dvorak";
   time.timeZone = "Europe/Berlin";
 
-  users.users.peter = {
+  users.users.${config.user} = {
     isNormalUser = true;
     description = "Peter";
     extraGroups = [ "networkmanager" "wheel" "media" ];

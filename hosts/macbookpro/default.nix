@@ -8,7 +8,6 @@
       ../../modules/user
     ];
 
-  desktopEnv.enable = true;
   hostname = "macbookpro";
 
   boot.loader.systemd-boot.enable = true;

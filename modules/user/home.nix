@@ -11,14 +11,19 @@
   };
 
   config = {
+    programs.fish.enable = true;
+    environment.variables.EDITOR = "nvim";
+
     home-manager.users.${config.user} = { pkgs, ... }: {
       home.packages = with pkgs; [
         bat
         bind
         cargo # nil_ls
+        fish
         gcc
         git
         htop
+        nixpkgs-fmt
         nodejs # astronvim ls, formatters, etc
         rustc
         ripgrep # text search in nvim
@@ -52,7 +57,6 @@
         source = ../../dotfiles/tmux/.tmux.conf;
         target = ".tmux.conf";
       };
-      # home.stateVersion = "23.11";
     };
 
     home-manager.useGlobalPkgs = true;

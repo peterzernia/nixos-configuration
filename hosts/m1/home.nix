@@ -8,6 +8,7 @@
       inputs.home-manager.darwinModules.default
     ];
 
+  user = "peterzernia";
   programs.fish.enable = true;
 
   users.users.${config.user} = {

@@ -12,8 +12,6 @@
       ../../modules/vpn/server
     ];
 
-
-  desktopEnv.enable = false;
   hostname = "pi";
 
   services.tt-rss = {

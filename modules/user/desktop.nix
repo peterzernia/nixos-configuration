@@ -6,11 +6,10 @@
   };
 
   config = lib.mkIf config.desktopEnv.enable {
-    home-manager.users.peter = { pkgs, ... }: {
+    home-manager.users.${config.user} = { pkgs, ... }: {
       home.packages = with pkgs; [
         firefox
         libreoffice
-        nixpkgs-fmt
         powertop
         rclone
         soulseekqt
