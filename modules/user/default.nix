@@ -12,7 +12,6 @@
   console.keyMap = "dvorak";
   time.timeZone = "Europe/Berlin";
 
-
   users.users.peter = {
     isNormalUser = true;
     description = "Peter";
