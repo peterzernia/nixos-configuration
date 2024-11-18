@@ -41,5 +41,13 @@
       iterm2
     ];
 
+    xdg.configFile.skhd = {
+      recursive = true;
+      source = ../../dotfiles/skhd;
+    };
+    xdg.configFile.yabai = {
+      recursive = true;
+      source = ../../dotfiles/yabai;
+    };
   };
 }
