@@ -18,5 +18,26 @@
 
   home-manager.users.${config.user} = { pkgs, ... }: {
     home.stateVersion = "24.11";
+
+    home.packages = with pkgs; [
+      # cli
+      awscli
+      ffmpeg
+      k9s
+      mycli
+      pgcli
+      wireguard-tools
+
+      # language
+      go
+      golangci-lint
+      python3
+
+      # apps
+      discord
+      # firefox
+      iterm2
+    ];
+
   };
 }

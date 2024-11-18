@@ -40,10 +40,14 @@ If the machine is running in the home network, setting
 
 ### user
 The user module is broken up into the basic default user config 
-I would want on most machines with fish, tmux, vim, etc. A desktop
-environment with xfce+i3 can be enabled by adding
+I would want on most machines with fish, tmux, vim, etc. The home.nix
+can be imported directly, for example, in a darwin setup or the user
+module can be imported completely on a nixos setup.
+
+A desktop environment with xfce+i3 can be enabled by adding
 `desktopEnv.enable = true;`
 Developer environment can be setup with `devEnv.enable = true;`
+
 
 ### vpn
 Both client and server vpn confings exist here.
