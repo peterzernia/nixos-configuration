@@ -26,7 +26,9 @@
       k9s
       mycli
       pgcli
+      skhd
       wireguard-tools
+      yabai
 
       # language
       go
