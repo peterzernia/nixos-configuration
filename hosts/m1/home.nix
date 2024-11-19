@@ -23,23 +23,37 @@
       # cli
       awscli
       ffmpeg
+      kubectx
       k9s
       mycli
       pgcli
+      protobuf
       skhd
       wireguard-tools
       yabai
 
       # language
+      black
       go
       golangci-lint
+      goose
       python3
+      ruff
 
       # apps
       discord
       # firefox
       iterm2
     ];
+
+    programs.kitty = {
+      enable = true;
+      font = {
+        name = "DroidSansMono Nerd Font Mono";
+        size = 12;
+      };
+      themeFile = "Catppuccin-Macchiato";
+    };
 
     xdg.configFile.skhd = {
       recursive = true;

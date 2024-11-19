@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   seedingPort = 63571;
@@ -118,7 +118,7 @@ in
     };
   };
 
-  users.users.peter = {
+  users.users.${config.user} = {
     packages = with pkgs; [
       libnatpmp
     ];
