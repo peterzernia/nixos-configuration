@@ -5,6 +5,7 @@
     [
       ./boot.nix
       ./hardware.nix
+      ./home.nix
 
       ../../modules/common
       ../../modules/gaming

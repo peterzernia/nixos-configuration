@@ -2,6 +2,7 @@
   imports =
     [
       ./hardware.nix
+      ./home.nix
 
       ../../modules/common
       ../../modules/networking
@@ -15,4 +16,3 @@
 
   system.stateVersion = "24";
 }
-
