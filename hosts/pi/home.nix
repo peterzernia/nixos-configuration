@@ -11,7 +11,14 @@
   user = "peter";
   desktopEnv.enable = false;
 
+  environment.variables = {
+    TERM = "xterm-256color";
+  };
+
   home-manager.users.${config.user} = { pkgs, ... }: {
     home.stateVersion = "23.11";
+    home.packages = with pkgs; [
+      kitty
+    ];
   };
 }
