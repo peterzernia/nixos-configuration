@@ -29,6 +29,7 @@
       pgcli
       protobuf
       skhd
+      traefik
       wireguard-tools
       yabai
 
