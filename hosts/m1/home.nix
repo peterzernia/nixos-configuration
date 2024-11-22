@@ -21,10 +21,12 @@
 
     home.packages = with pkgs; [
       # cli
-      awscli
+      awscli2
       ffmpeg
+      gnupg
       kubectx
       k9s
+      mariadb
       mycli
       pgcli
       protobuf
