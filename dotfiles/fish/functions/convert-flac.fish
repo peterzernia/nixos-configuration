@@ -1,6 +1,6 @@
 function convert-flac
   set prev (pwd)
-  cd '/Users/peterzernia/Soulseek Downloads/complete/_flac/'
+  cd '/Users/peterzernia/soulseek/_flac/'
   for f in *.flac;
     echo $f;
     set filename $(string replace flac aiff $f);
