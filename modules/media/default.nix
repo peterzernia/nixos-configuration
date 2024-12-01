@@ -1,11 +1,11 @@
 { config, pkgs, ... }:
 
 let
-  seedingPort = 63571;
+  seedingPort = 64696;
 in
 {
   users.groups.media = { };
-  users.users.peter.extraGroups = [ "media" ];
+  # users.users.${config.user}.extraGroups = [ "media" ];
   users.users.sonarr.extraGroups = [ "media" ];
   users.users.radarr.extraGroups = [ "media" ];
   users.users.bazarr.extraGroups = [ "media" ];
@@ -43,7 +43,7 @@ in
     };
     deluge = {
       enable = true;
-      user = "peter";
+      user = "${config.user}";
       group = "media";
       web.enable = true;
       dataDir = "/media/torrents";
