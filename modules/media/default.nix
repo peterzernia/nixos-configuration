@@ -72,6 +72,21 @@ in
         '';
       };
     };
+    slskd = {
+      enable = true;
+      user = "${config.user}";
+      group = "media";
+      openFirewall = true;
+      domain = "0.0.0.0";
+      environmentFile = /home/${config.user}/slskd.env;
+      settings = {
+        directories = {
+          downloads = "/media/soulseek/downloads";
+          incomplete = "/media/soulseek/incomplete";
+        };
+        shares.directories = [ "/media/soulseek" ];
+      };
+    };
     grafana = {
       enable = true;
       settings = {
@@ -108,6 +123,7 @@ in
         6767 # bazarr
         7878 # radarr
         8112 # deluge-web
+        5030 # slskd
         8989 # sonarr
         9090 # prometheus
         seedingPort

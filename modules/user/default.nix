@@ -53,6 +53,10 @@
           path = "/home/peter/sync/documents";
           devices = [ "m1" "pixel7a" "nixos" ];
         };
+        "Soulseek" = {
+          path = "/media/soulseek/downloads";
+          devices = [ "m1" ];
+        };
       };
     };
   };
