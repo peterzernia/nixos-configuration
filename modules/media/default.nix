@@ -84,7 +84,10 @@ in
           downloads = "/media/soulseek/downloads";
           incomplete = "/media/soulseek/incomplete";
         };
-        shares.directories = [ "/media/soulseek" ];
+        shares.directories = [
+          "/media/soulseek"
+          "/media/uploads"
+        ];
       };
     };
     grafana = {
