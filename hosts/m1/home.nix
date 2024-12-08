@@ -23,6 +23,7 @@
       # cli
       awscli2
       ffmpeg
+      flac
       gnupg
       kubectx
       k9s
@@ -30,6 +31,8 @@
       mycli
       pgcli
       protobuf
+      protoc-gen-go
+      protoc-go-inject-tag
       skhd
       traefik
       wireguard-tools
@@ -42,6 +45,7 @@
       goose
       python3
       ruff
+      typescript-language-server
 
       # apps
       discord
