@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  seedingPort = 64696;
+  seedingPort = 39364;
 in
 {
   users.groups.media = { };
@@ -50,7 +50,7 @@ in
       declarative = true;
       config = {
         download_location = "/media2/torrents";
-        enabled_plugins = [ "Label"  "ltconfig" ];
+        enabled_plugins = [ "Label"  "ltconfig" "AutoAdd" ];
         outgoing_interface = "wg0";
         incoming_interface = "wg0";
         random_port = false;
@@ -60,8 +60,8 @@ in
         stop_seed_at_ratio = false;
         max_download_speed = 10240;
         max_active_downloading = 3;
-        max_active_seeding = 1000;
-        max_active_limit = 1003;
+        max_active_seeding = 10000;
+        max_active_limit = 10003;
         max_upload_slots_global = -1;
         max_connections_global = -1;
       };
