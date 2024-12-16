@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  seedingPort = 39364;
+  seedingPort = 35710;
 in
 {
   users.groups.media = { };
