@@ -53,8 +53,9 @@ in
         enabled_plugins = [ "Label"  "ltconfig" "AutoAdd" ];
         outgoing_interface = "wg0";
         incoming_interface = "wg0";
-        random_port = false;
-        listen_ports = [ seedingPort seedingPort ];
+        random_port = true;
+        # random_port = false;
+        # listen_ports = [ seedingPort seedingPort ];
         upnp = false;
         natpmp = false;
         stop_seed_at_ratio = false;
@@ -126,6 +127,7 @@ in
         6767 # bazarr
         7878 # radarr
         8112 # deluge-web
+        8080 # qbittorrent webui
         5030 # slskd
         8989 # sonarr
         9090 # prometheus
@@ -140,6 +142,7 @@ in
   users.users.${config.user} = {
     packages = with pkgs; [
       libnatpmp
+      qbittorrent
     ];
   };
 }
