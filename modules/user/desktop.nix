@@ -47,7 +47,7 @@
     };
 
     fonts.packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "DroidSansMono" ]; })
+      nerd-fonts.droid-sans-mono
     ];
 
     security.sudo.extraRules = [
@@ -110,7 +110,7 @@
       LC_TIME = "de_DE.UTF-8";
     };
 
-    hardware.pulseaudio.enable = false;
+    services.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {
       enable = true;

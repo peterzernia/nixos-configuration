@@ -4,6 +4,12 @@ let
   seedingPort = 35710;
 in
 {
+  # sonarr
+  nixpkgs.config.permittedInsecurePackages = [
+    "aspnetcore-runtime-6.0.36"
+    "dotnet-sdk-6.0.428"
+  ];
+
   users.groups.media = { };
   # users.users.${config.user}.extraGroups = [ "media" ];
   users.users.sonarr.extraGroups = [ "media" ];
