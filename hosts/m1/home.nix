@@ -24,6 +24,7 @@
       awscli2
       ffmpeg
       flac
+      ghostscript
       gnupg
       kubectx
       k9s
@@ -34,6 +35,7 @@
       protoc-gen-go
       protoc-go-inject-tag
       skhd
+      tesseract
       traefik
       wireguard-tools
       yabai
@@ -43,6 +45,7 @@
       go
       golangci-lint
       goose
+      poetry
       python3
       ruff
       typescript-language-server
