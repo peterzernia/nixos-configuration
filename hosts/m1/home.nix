@@ -1,4 +1,4 @@
-{ config, inputs, lib, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
 {
   imports =
@@ -46,8 +46,10 @@
       go
       golangci-lint
       goose
+      go-mockery
       poetry
       python3
+      oapi-codegen
       ruff
       typescript-language-server
 
