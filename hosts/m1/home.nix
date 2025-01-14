@@ -31,6 +31,7 @@
       mariadb
       mycli
       pgcli
+      postgresql
       protobuf
       protoc-gen-go
       protoc-go-inject-tag
