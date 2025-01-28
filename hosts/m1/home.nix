@@ -1,4 +1,4 @@
-{ config, inputs, lib, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
 {
   imports =
@@ -24,16 +24,19 @@
       awscli2
       ffmpeg
       flac
+      ghostscript
       gnupg
       kubectx
       k9s
       mariadb
       mycli
       pgcli
+      postgresql
       protobuf
       protoc-gen-go
       protoc-go-inject-tag
       skhd
+      tesseract
       traefik
       wireguard-tools
       yabai
@@ -43,7 +46,10 @@
       go
       golangci-lint
       goose
+      go-mockery
+      poetry
       python3
+      oapi-codegen
       ruff
       typescript-language-server
 
