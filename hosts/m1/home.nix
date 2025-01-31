@@ -44,12 +44,12 @@
       # language
       black
       go
+      gofumpt
       golangci-lint
       goose
       go-mockery
       mockgen
       poetry
-      # poetryPlugins.poetry-plugin-shell
       python3
       oapi-codegen
       ruff
