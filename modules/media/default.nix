@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  seedingPort = 57920;
+  seedingPort = 46810;
 in
 {
   # sonarr
@@ -52,7 +52,7 @@ in
       user = "${config.user}";
       group = "media";
       web.enable = true;
-      dataDir = "/media/torrents";
+      dataDir = "/media2/torrents";
       declarative = true;
       config = {
         download_location = "/media2/torrents";
