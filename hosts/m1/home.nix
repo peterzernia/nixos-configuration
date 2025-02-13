@@ -43,6 +43,7 @@
 
       # language
       black
+      gci
       go
       gofumpt
       golangci-lint
