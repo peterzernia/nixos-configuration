@@ -39,7 +39,7 @@
         enable = true;
         plugins = with pkgs; [
           tmuxPlugins.continuum
-          # tmuxPlugins.resurrect
+          tmuxPlugins.resurrect
           tmuxPlugins.sensible
         ];
       };
