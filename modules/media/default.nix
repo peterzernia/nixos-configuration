@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  seedingPort = 45604;
+  seedingPort = 37112;
 in
 {
   # sonarr
@@ -12,6 +12,7 @@ in
 
   users.groups.media = { };
   # users.users.${config.user}.extraGroups = [ "media" ];
+  users.users.navidrome.extraGroups = [ "media" ];
   users.users.sonarr.extraGroups = [ "media" ];
   users.users.radarr.extraGroups = [ "media" ];
   users.users.bazarr.extraGroups = [ "media" ];
@@ -23,6 +24,17 @@ in
   ];
 
   services = {
+    navidrome = {
+      enable = true;
+      openFirewall = true;
+      group = "media";
+      settings = {
+        Address = "0.0.0.0";
+        Port = 4533;
+        MusicFolder = "/media3/redacted";
+        EnableSharing = true;
+      };
+    };
     jellyfin = {
       enable = true;
       openFirewall = true;
