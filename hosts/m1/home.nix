@@ -26,8 +26,9 @@
       flac
       ghostscript
       gnupg
-      kubectx
       k9s
+      kubectx
+      kind
       mariadb
       mycli
       pgcli
