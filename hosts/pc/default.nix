@@ -53,7 +53,7 @@
 
   services.ollama = {
     enable = true;
-    acceleration = "cuda";
+    # acceleration = "cuda";
     openFirewall = true;
     loadModels = [ "DeepSeek-R1" "DeepSeek-Coder-V2" ];
   };
