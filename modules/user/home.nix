@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, isDarwin, ... }:
+{ config, lib, ... }:
 
 {
   options = {

@@ -9,12 +9,12 @@
     ];
 
   user = "peterzernia";
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      fish_vi_key_bindings
-    '';
-  };
+  # programs.fish = {
+  #   enable = true;
+  #   interactiveShellInit = ''
+  #     fish_vi_key_bindings
+  #   '';
+  # };
 
   users.users.${config.user} = {
     home = /Users/${config.user};
