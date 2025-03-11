@@ -11,7 +11,12 @@
   };
 
   config = {
-    programs.fish.enable = true;
+    programs.fish = {
+      enable = true;
+      interactiveShellInit = ''
+        fish_vi_key_bindings
+      '';
+    };
     environment.variables.EDITOR = "nvim";
 
     home-manager.users.${config.user} = { pkgs, ... }: {
