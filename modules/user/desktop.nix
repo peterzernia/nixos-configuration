@@ -21,14 +21,6 @@
       programs.ghostty = {
         enable = true;
       };
-      programs.kitty = {
-        enable = true;
-        font = {
-          name = "DroidSansMono Nerd Font Mono";
-          size = 10;
-        };
-        themeFile = "Catppuccin-Macchiato";
-      };
 
       xdg.configFile.i3 = {
         recursive = true;
