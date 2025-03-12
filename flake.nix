@@ -2,16 +2,22 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+    # linux dependencies
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # darwin dependencies
     darwin = {
-      url = "github:lnl7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:lnl7/nix-darwin/master";
+    };
+    home-manager-darwin = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "darwin";
     };
   };
 
@@ -22,7 +28,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/m1
-            inputs.home-manager.darwinModules.default
+            inputs.home-manager-darwin.darwinModules.default
           ];
         };
       };

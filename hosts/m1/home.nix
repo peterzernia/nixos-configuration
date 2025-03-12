@@ -5,7 +5,7 @@
     [
       ../../modules/user/home.nix
 
-      inputs.home-manager.darwinModules.default
+      inputs.home-manager-darwin.darwinModules.default
     ];
 
   user = "peterzernia";
