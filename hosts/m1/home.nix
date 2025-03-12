@@ -68,15 +68,6 @@
       iterm2
     ];
 
-    programs.kitty = {
-      enable = true;
-      font = {
-        name = "DroidSansMono Nerd Font Mono";
-        size = 12;
-      };
-      themeFile = "Catppuccin-Macchiato";
-    };
-
     xdg.configFile.skhd = {
       recursive = true;
       source = ../../dotfiles/skhd;
