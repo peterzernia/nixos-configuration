@@ -18,6 +18,9 @@
         vlc
       ];
 
+      programs.ghostty = {
+        enable = true;
+      };
       programs.kitty = {
         enable = true;
         font = {

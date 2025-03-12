@@ -14,9 +14,7 @@
   home-manager.users.${config.user} = { pkgs, ... }: {
     home.stateVersion = "23.11";
 
-    programs.kitty = {
-      enable = true;
-    };
+    programs.ghostty.enable = true;
   };
 
 }
