@@ -53,9 +53,12 @@
 
   services.ollama = {
     enable = true;
-    # acceleration = "cuda";
+    acceleration = "cuda";
     openFirewall = true;
     loadModels = [ "DeepSeek-R1" "DeepSeek-Coder-V2" ];
+    environmentVariables = {
+      OLLAMA_KEEP_ALIVE="15m";
+    };
   };
 
   services.open-webui = {
