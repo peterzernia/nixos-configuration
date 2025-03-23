@@ -63,6 +63,7 @@
       typescript-language-server
 
       # apps
+      darktable
       discord
       # firefox
       iterm2
