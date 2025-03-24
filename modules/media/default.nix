@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  seedingPort = 46752;
+  seedingPort = 38610;
 in
 {
   # sonarr
@@ -161,7 +161,16 @@ in
     packages = with pkgs; [
       libnatpmp
       qbittorrent
+      qbittorrent-nox
     ];
   };
+
+  home-manager.users.${config.user} = { pkgs, ... }: {
+    home.file.qBittorrent = {
+      source = ../../dotfiles/qBittorrent/qBittorrent.conf;
+      target = ".config/qBittorrent/qBittorrent.conf";
+    };
+  };
+
 }
 
