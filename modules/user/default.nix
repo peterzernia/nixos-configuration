@@ -45,6 +45,10 @@
         "nixos" = { id = "FYE2OFW-YBGUODS-NAMNIAM-4JGI4BJ-CAZMLE2-OGCFSDN-42WJ25H-2WHYYQZ"; };
       };
       folders = {
+        "Backups" = {
+          path = "/home/peter/sync/backups";
+          devices = [ "m1" "pixel7a" "nixos" ];
+        };
         "Notes" = {
           path = "/home/peter/sync/notes";
           devices = [ "m1" "pixel7a" "nixos" ];

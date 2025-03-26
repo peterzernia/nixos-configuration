@@ -171,6 +171,5 @@ in
       target = ".config/qBittorrent/qBittorrent.conf";
     };
   };
-
 }
 
