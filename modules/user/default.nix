@@ -46,6 +46,7 @@
       };
       folders = {
         "Backups" = {
+          id = "68kqw-rn8e2";
           path = "/home/peter/sync/backups";
           devices = [ "m1" "pixel7a" "nixos" ];
         };
@@ -59,7 +60,7 @@
         };
         "Soulseek" = {
           path = "/media/soulseek/downloads";
-          devices = [ "m1" ];
+          devices = [ "m1" "nixos" ];
         };
       };
     };
