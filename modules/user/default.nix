@@ -41,7 +41,7 @@
     settings = {
       devices = {
         "m1" = { id = "TA3QDQ5-WA2RYR3-ZXXYR25-O2I7TE5-T2AIECT-XWDZX73-UY6UF35-SDFBVQN"; };
-        "pixel7a" = { id = "AQW2HJY-QMRL4WZ-6GP3HC4-JPTZU5C-3JL6I6P-5AAGMMS-DZGVL67-CM5JJQ4"; };
+        "pixel7a" = { id = "TH53SNX-NGQOJWR-BY6NGIA-FEXGNG5-BHJ2UEV-MSZWPW3-SPLJEKS-IBEO3Q3"; };
         "nixos" = { id = "FYE2OFW-YBGUODS-NAMNIAM-4JGI4BJ-CAZMLE2-OGCFSDN-42WJ25H-2WHYYQZ"; };
       };
       folders = {
