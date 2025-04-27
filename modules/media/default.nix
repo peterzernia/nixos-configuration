@@ -64,10 +64,10 @@ in
       user = "${config.user}";
       group = "media";
       web.enable = true;
-      dataDir = "/media2/torrents";
+      dataDir = "/media/torrents";
       declarative = true;
       config = {
-        download_location = "/media2/torrents";
+        download_location = "/media/torrents";
         enabled_plugins = [ "Label"  "ltconfig" "AutoAdd" ];
         outgoing_interface = "wg0";
         incoming_interface = "wg0";
