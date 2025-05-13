@@ -58,7 +58,7 @@ alt - space: open -a Finder
 alt - u : yabai -m window --toggle zoom-fullscreen
 
 # restart wm
-shift + alt - p : brew services restart yabai
+shift + alt - p : yabai --restart-service && skhd --restart-service
 
 # kill window
 shift + alt - 0x0C : bash -c '$(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)'
