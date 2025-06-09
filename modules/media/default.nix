@@ -165,11 +165,11 @@ in
     ];
   };
 
-  home-manager.users.${config.user} = { pkgs, ... }: {
-    home.file.qBittorrent = {
-      source = ../../dotfiles/qBittorrent/qBittorrent.conf;
-      target = ".config/qBittorrent/qBittorrent.conf";
-    };
-  };
+  # home-manager.users.${config.user} = { pkgs, ... }: {
+  #   home.file.qBittorrent = {
+  #     source = ../../dotfiles/qBittorrent/qBittorrent.conf;
+  #     target = ".config/qBittorrent/qBittorrent.conf";
+  #   };
+  # };
 }
 
