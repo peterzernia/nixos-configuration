@@ -21,6 +21,7 @@
 
     home-manager.users.${config.user} = { pkgs, ... }: {
       home.packages = with pkgs; [
+        atuin
         bat
         bind
         cargo # nil_ls
