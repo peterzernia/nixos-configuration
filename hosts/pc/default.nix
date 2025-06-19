@@ -55,6 +55,7 @@
     enable = true;
     acceleration = "cuda";
     openFirewall = true;
+    host = "0.0.0.0";
     loadModels = [ "DeepSeek-R1" "DeepSeek-Coder-V2" ];
     environmentVariables = {
       OLLAMA_KEEP_ALIVE="15m";
