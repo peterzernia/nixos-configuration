@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ../../modules/user/editor.nix
       ../../modules/user/home.nix
 
       inputs.home-manager-darwin.darwinModules.default
@@ -63,6 +64,7 @@
       typescript-language-server
 
       # apps
+      code-cursor
       darktable
       discord
       # firefox

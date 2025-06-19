@@ -1,6 +1,11 @@
 { config, pkgs, lib, ... }:
 
 {
+  imports = 
+  [
+    ./editor.nix
+  ];
+
   options = {
     desktopEnv.enable = lib.mkEnableOption "enable desktop environment";
   };
