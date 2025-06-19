@@ -17,7 +17,6 @@
         libreoffice
         powertop
         rclone
-        soulseekqt
         spotify
         unzip
         vlc
