@@ -34,12 +34,12 @@
         yarn
       ];
 
-      # programs.atuin = {
-      #   enable = true;
-      #   settings = {
-      #     filter_mode = "session";
-      #   };
-      # };
+      programs.atuin = {
+        enable = true;
+        settings = {
+          filter_mode = "session";
+        };
+      };
 
       programs.neovim = {
         enable = true;
