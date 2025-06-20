@@ -21,7 +21,6 @@
 
     home-manager.users.${config.user} = { pkgs, ... }: {
       home.packages = with pkgs; [
-        atuin
         bat
         bind
         cargo # nil_ls
@@ -34,6 +33,13 @@
         ripgrep # text search in nvim
         yarn
       ];
+
+      # programs.atuin = {
+      #   enable = true;
+      #   settings = {
+      #     filter_mode = "session";
+      #   };
+      # };
 
       programs.neovim = {
         enable = true;
