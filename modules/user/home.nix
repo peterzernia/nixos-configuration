@@ -37,7 +37,8 @@
       programs.atuin = {
         enable = true;
         settings = {
-          filter_mode = "session";
+          filter_mode = "global";
+          filter_mode_shell_up_key_binding = "session";
           keymap_mode = "vim-normal";
           enter_accept = true;
         };
