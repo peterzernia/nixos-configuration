@@ -64,7 +64,6 @@
       typescript-language-server
 
       # apps
-      code-cursor
       darktable
       discord
       # firefox

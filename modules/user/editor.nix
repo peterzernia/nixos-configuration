@@ -22,6 +22,9 @@
           ollama = {
             api_url = "http://192.168.178.142:11434";
           };
+          openapi = {
+            api_url = "http://localhost:1234/v1";
+          };
         };
         assistant = {
           enabled = true;
