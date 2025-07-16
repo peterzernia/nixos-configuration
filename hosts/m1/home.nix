@@ -10,12 +10,6 @@
     ];
 
   user = "peterzernia";
-  # programs.fish = {
-  #   enable = true;
-  #   interactiveShellInit = ''
-  #     fish_vi_key_bindings
-  #   '';
-  # };
 
   users.users.${config.user} = {
     home = /Users/${config.user};
@@ -68,6 +62,7 @@
       discord
       # firefox
       iterm2
+      raycast
     ];
 
     xdg.configFile.skhd = {
