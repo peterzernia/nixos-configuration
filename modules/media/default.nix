@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  seedingPort = 40621;
+  seedingPort = 35368;
 in
 {
   # sonarr
