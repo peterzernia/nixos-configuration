@@ -44,6 +44,13 @@
         };
       };
 
+      programs.lazygit = {
+        enable = true; 
+        settings = {
+          lightTheme = false;
+        };
+      };
+
       programs.neovim = {
         enable = true;
         vimAlias = true;
