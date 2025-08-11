@@ -19,6 +19,7 @@
         rclone
         spotify
         unzip
+        unrar
         vlc
       ];
 
