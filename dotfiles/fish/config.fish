@@ -1,6 +1,9 @@
 if status is-interactive
 and not set -q TMUX
-  tmux new-session -A -s default || tmux new-session -s default
+    set host (hostname)
+    if string match 'nixos' $host
+        tmux new-session -A -s default || tmux new-session -s default
+    end
 end
 
 bind -M insert \cf accept-autosuggestion
