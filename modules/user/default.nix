@@ -61,8 +61,6 @@
     };
   };
 
-  # required for wg-mullvad atm
-  networking.resolvconf.enable = false;
   services.openssh.enable = true;
 
 }
