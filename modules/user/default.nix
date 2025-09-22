@@ -33,11 +33,6 @@
     openDefaultPorts = true;
     overrideDevices = true;
     overrideFolders = true;
-    extraFlags = [
-      # required while dataDir & configDir not working correctly
-      "-data=/home/peter/sync"
-      "-config=/home/peter/sync/.config/syncthing"
-    ];
     settings = {
       devices = {
         "m1" = { id = "TA3QDQ5-WA2RYR3-ZXXYR25-O2I7TE5-T2AIECT-XWDZX73-UY6UF35-SDFBVQN"; };
@@ -66,8 +61,6 @@
     };
   };
 
-  # required for wg-mullvad atm
-  networking.resolvconf.enable = false;
   services.openssh.enable = true;
 
 }
