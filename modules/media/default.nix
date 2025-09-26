@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 
-let
-  seedingPort = 60255;
-in
 {
   # sonarr
   nixpkgs.config.permittedInsecurePackages = [
@@ -73,7 +70,7 @@ in
         incoming_interface = "wg0";
         random_port = true;
         # random_port = false;
-        # listen_ports = [ seedingPort seedingPort ];
+        # listen_ports = [ ];
         upnp = false;
         natpmp = false;
         stop_seed_at_ratio = false;
@@ -149,10 +146,8 @@ in
         5030 # slskd
         8989 # sonarr
         9090 # prometheus
-        seedingPort
       ];
       allowedUDPPorts = [
-        seedingPort
       ];
     };
   };
