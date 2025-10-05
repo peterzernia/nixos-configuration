@@ -1,5 +1,5 @@
 {
-  nix.gc.automatic = true;
+  nix.gc.automatic = false;
   boot.loader = {
     systemd-boot = {
       enable = true;
@@ -13,7 +13,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   boot.initrd.kernelModules = [ "uas" "usbcore" "usb_storage" "vfat" "nls_cp437" "nls_iso8859_1" ];
-  boot.kernelParams = [ "quiet" "splash" ];
+  boot.kernelParams = [ "quiet" "splash" "nvidia-drm.modeset=1" ];
 
   # unlock luks drives at boot with USB or password as fallback
   boot.initrd.luks.devices = {
