@@ -32,6 +32,8 @@
         enable = true;
       };
 
+      home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
+
       wayland.windowManager.hyprland = {
         enable = true;
         package = pkgs.hyprland;
@@ -43,16 +45,16 @@
             "waybar"
           ];
           workspace = [
-            "1, default:true, persistent:true"
-            "2, persistent:true"
-            "3, persistent:true"
-            "4, persistent:true"
-            "5, persistent:true"
-            "6, persistent:true"
-            "7, persistent:true"
-            "8, persistent:true"
-            "9, persistent:true"
-            "10, persistent:true"
+            "1, default:true"
+            "2"
+            "3"
+            "4"
+            "5"
+            "6"
+            "7"
+            "8"
+            "9"
+            "10"
           ];
           bind = [
             "$mod, e, exec, rofi -show run"
@@ -94,6 +96,10 @@
           decoration = {
             rounding = 10;
           };
+          general = {
+            gaps_in = 5;  
+            gaps_out = 6;
+          };
         };
       };
 
@@ -105,7 +111,10 @@
             "hyprland/workspaces"
           ];
           modules-right = [
+            "custom/ip"
+            "custom/divider"
             "pulseaudio"
+            "custom/divider"
             "clock"
           ];
           "hyprland/workspaces" = {
@@ -120,7 +129,17 @@
             format-icons = {
               default = [ "" "" "" ];
             };
-      };
+          };
+          "custom/divider" = {
+            format = " | ";
+            interval = "once";
+            tooltip = false;
+          };
+          "custom/ip" = {
+            exec = "ip=$(curl ifconfig.me);echo $ip";
+            interval = 300;
+            format = "{}";
+          };
         }];
       };
 
@@ -216,7 +235,6 @@
       LC_TIME = "de_DE.UTF-8";
     };
 
-    services.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {
       enable = true;
@@ -224,8 +242,5 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
-
-    # needed for sway
-    security.polkit.enable = true;
   };
 }
