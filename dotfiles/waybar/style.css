@@ -25,3 +25,7 @@
 #workspaces button.urgent {}
 
 #workspaces button:hover {}
+
+#clock {
+  margin-right: 8px;
+}

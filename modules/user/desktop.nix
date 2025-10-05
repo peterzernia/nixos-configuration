@@ -13,9 +13,11 @@
   config = lib.mkIf config.desktopEnv.enable {
     home-manager.users.${config.user} = { pkgs, config, ... }: {
       home.packages = with pkgs; [
-        kdePackages.dolphin
         firefox
         libreoffice
+        kdePackages.dolphin
+        networkmanagerapplet
+        pavucontrol
         powertop
         rclone
         rofi
@@ -25,13 +27,16 @@
         vlc
 
         egl-wayland
+        hypridle
+        hyprlock
+        swaybg
         wayland-utils
       ];
 
       programs.ghostty = {
         enable = true;
       };
-
+      
       home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
 
       wayland.windowManager.hyprland = {
@@ -43,6 +48,9 @@
           "$mod" = "ALT";
           "exec-once" = [
             "waybar"
+          ];
+          exec = [
+            "swaybg -i ~/nixos/wallpaper.jpg &"
           ];
           workspace = [
             "1, default:true"
@@ -115,6 +123,8 @@
             "custom/divider"
             "pulseaudio"
             "custom/divider"
+            "tray"
+            "custom/divider"
             "clock"
           ];
           "hyprland/workspaces" = {
@@ -130,6 +140,9 @@
               default = [ "" "" "" ];
             };
           };
+          tray = {
+            spacing = 8;
+          };
           "custom/divider" = {
             format = " | ";
             interval = "once";
@@ -141,6 +154,23 @@
             format = "{}";
           };
         }];
+      };
+
+      services.hypridle = {
+        enable = true;
+        settings = {
+          listener = [
+            {
+              timeout = 300;
+              on-timeout = "hyprlock";
+            }
+            {
+              timeout = 330;
+              on-timeout = "hyprctl dispatch dpms off";
+              on-resume = "hyprctl dispatch dpms on";
+            }
+          ];
+        };
       };
 
       # xdg.configFile.i3 = {
