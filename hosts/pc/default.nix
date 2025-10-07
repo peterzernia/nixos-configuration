@@ -63,7 +63,7 @@
   };
 
   services.open-webui = {
-    enable = false;
+    enable = true;
     openFirewall = true;
     port = 8081;
     host = "0.0.0.0";
