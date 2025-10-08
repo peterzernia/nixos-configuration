@@ -9,11 +9,28 @@
       inputs.home-manager-darwin.darwinModules.default
     ];
 
+  # needed for homebrew
+  system.primaryUser = "peterzernia";
   user = "peterzernia";
 
   users.users.${config.user} = {
     home = /Users/${config.user};
     shell = pkgs.fish;
+  };
+
+  homebrew = {
+    enable = true;
+    casks = [
+      "ghostty"
+      "proton-drive"
+      "protonvpn"
+      "rekordbox"
+    ];
+    onActivation = {
+      autoUpdate = true;
+      cleanup = "uninstall";
+      upgrade = true;
+    };
   };
 
   home-manager.users.${config.user} = { pkgs, ... }: {
@@ -22,10 +39,8 @@
     home.packages = with pkgs; [
       # cli
       awscli2
+      docker
       ffmpeg
-      flac
-      ghostscript
-      gnupg
       k9s
       kubectx
       kind
@@ -37,7 +52,6 @@
       protoc-gen-go
       protoc-go-inject-tag
       skhd
-      tesseract
       traefik
       wireguard-tools
       yabai
@@ -60,9 +74,18 @@
       # apps
       darktable
       discord
-      # firefox
+      firefox
+      firefox-devedition
+      google-chrome
+      insomnia
       iterm2
       raycast
+
+      # tmp
+      flac
+      ghostscript
+      gnupg
+      tesseract
     ];
 
     xdg.configFile.skhd = {

@@ -24,10 +24,10 @@
   outputs = { self, nixpkgs, ... }@inputs:
     {
       darwinConfigurations = {
-        "FIN-0309-Peter-Zernia" = inputs.darwin.lib.darwinSystem {
+        m3 = inputs.darwin.lib.darwinSystem {
           specialArgs = { inherit inputs; };
           modules = [
-            ./hosts/m1
+            ./hosts/m3
             inputs.home-manager-darwin.darwinModules.default
           ];
         };
