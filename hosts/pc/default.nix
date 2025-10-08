@@ -20,7 +20,12 @@
   homeNetwork.enable = true;
   hostname = "nixos";
   nvidia.enable = true;
-  services.syncthing.enable = true;
+
+  services.syncthing = {
+    enable = true;
+    dataDir = "/home/peter/sync";
+    configDir = "/home/peter/sync/.config/syncthing";
+  };
 
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "${config.user}";

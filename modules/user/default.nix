@@ -29,8 +29,6 @@
 
   services.syncthing = {
     user = "peter";
-    dataDir = "/home/peter/sync";
-    configDir = "/home/peter/sync/.config/syncthing";
     guiAddress = "0.0.0.0:8384";
     openDefaultPorts = true;
     overrideDevices = true;
