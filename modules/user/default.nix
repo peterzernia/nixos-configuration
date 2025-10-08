@@ -36,6 +36,7 @@
     settings = {
       devices = {
         "m1" = { id = "TA3QDQ5-WA2RYR3-ZXXYR25-O2I7TE5-T2AIECT-XWDZX73-UY6UF35-SDFBVQN"; };
+        "m3" = { id = "YAF5IQH-X7ZMGQP-VUE2ARA-XLR2Q2U-TVJJI4M-PESL44T-MJ5M3LA-JVNWUQM" };
         "pixel7a" = { id = "TH53SNX-NGQOJWR-BY6NGIA-FEXGNG5-BHJ2UEV-MSZWPW3-SPLJEKS-IBEO3Q3"; };
         "nixos" = { id = "FYE2OFW-YBGUODS-NAMNIAM-4JGI4BJ-CAZMLE2-OGCFSDN-42WJ25H-2WHYYQZ"; };
       };
@@ -43,19 +44,19 @@
         "Backups" = {
           id = "68kqw-rn8e2";
           path = "/home/peter/sync/backups";
-          devices = [ "m1" "pixel7a" "nixos" ];
+          devices = [ "m1" "m3" "pixel7a" "nixos" ];
         };
         "Notes" = {
           path = "/home/peter/sync/notes";
-          devices = [ "m1" "pixel7a" "nixos" ];
+          devices = [ "m1" "m3" "pixel7a" "nixos" ];
         };
         "Documents" = {
           path = "/home/peter/sync/documents";
-          devices = [ "m1" "pixel7a" "nixos" ];
+          devices = [ "m1" "m3" "pixel7a" "nixos" ];
         };
         "Soulseek" = {
           path = "/media/soulseek/downloads";
-          devices = [ "m1" "nixos" ];
+          devices = [ "m1" "m3" "nixos" ];
         };
       };
     };

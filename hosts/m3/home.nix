@@ -96,5 +96,9 @@
       recursive = true;
       source = ../../dotfiles/yabai;
     };
+
+    services.syncthing = {
+      enable = true;
+    };
   };
 }
