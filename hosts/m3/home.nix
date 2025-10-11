@@ -22,9 +22,14 @@
     enable = true;
     casks = [
       "ghostty"
+      "microsoft-teams"
       "proton-drive"
       "protonvpn"
       "rekordbox"
+      "signal"
+      "steam"
+      "tunnelblick"
+      "vlc"
     ];
     onActivation = {
       autoUpdate = true;
@@ -39,9 +44,9 @@
     home.packages = with pkgs; [
       # cli
       awscli2
-      docker
       ffmpeg
       k9s
+      kubectl
       kubectx
       kind
       mariadb
@@ -80,6 +85,7 @@
       insomnia
       iterm2
       raycast
+      spotify
 
       # tmp
       flac
@@ -97,8 +103,6 @@
       source = ../../dotfiles/yabai;
     };
 
-    services.syncthing = {
-      enable = true;
-    };
+    services.syncthing.enable = true;
   };
 }
