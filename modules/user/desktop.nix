@@ -121,6 +121,8 @@
           modules-right = [
             "custom/ip"
             "custom/divider"
+            "memory"
+            "custom/divider"
             "pulseaudio"
             "custom/divider"
             "tray"
@@ -129,6 +131,9 @@
           ];
           "hyprland/workspaces" = {
             disable-scroll = false;
+          };
+          memory = {
+            format = "{used:0.1f}G/{total:0.1f}G";
           };
           pulseaudio = {
             format = "{icon}  {volume}%";
