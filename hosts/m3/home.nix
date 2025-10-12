@@ -21,7 +21,10 @@
   homebrew = {
     enable = true;
     casks = [
+      "calibre"
+      "firefox"
       "ghostty"
+      "libreoffice"
       "microsoft-teams"
       "proton-drive"
       "protonvpn"
@@ -77,9 +80,9 @@
       typescript-language-server
 
       # apps
+      audacity
       darktable
       discord
-      firefox
       firefox-devedition
       google-chrome
       insomnia
