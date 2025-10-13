@@ -29,6 +29,7 @@
       "proton-drive"
       "protonvpn"
       "rekordbox"
+      "scroll-reverser"
       "signal"
       "steam"
       "tunnelblick"
