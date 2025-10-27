@@ -21,6 +21,7 @@
   homebrew = {
     enable = true;
     casks = [
+      "blackhole-2ch"
       "calibre"
       "firefox"
       "ghostty"
@@ -48,6 +49,7 @@
     home.packages = with pkgs; [
       # cli
       awscli2
+      buf
       ffmpeg
       k9s
       kubectl
