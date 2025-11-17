@@ -26,6 +26,7 @@
       "firefox"
       "ghostty"
       "libreoffice"
+      "loom"
       "microsoft-teams"
       "proton-drive"
       "protonvpn"
