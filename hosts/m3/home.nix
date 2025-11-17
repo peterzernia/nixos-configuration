@@ -77,10 +77,11 @@
       go-mockery
       mockgen
       poetry
-      python3
+      python313
       oapi-codegen
       ruff
       typescript-language-server
+      uv
 
       # apps
       audacity
