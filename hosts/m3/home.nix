@@ -26,7 +26,6 @@
       "firefox"
       "ghostty"
       "libreoffice"
-      "loom"
       "microsoft-teams"
       "proton-drive"
       "protonvpn"
@@ -56,6 +55,7 @@
       kubectl
       kubectx
       kind
+      litecli
       mariadb
       mycli
       pgcli
