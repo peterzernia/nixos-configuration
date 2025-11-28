@@ -21,7 +21,6 @@
   homebrew = {
     enable = true;
     casks = [
-      "blackhole-2ch"
       "calibre"
       "firefox"
       "ghostty"
