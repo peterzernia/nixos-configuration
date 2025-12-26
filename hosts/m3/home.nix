@@ -22,6 +22,7 @@
     enable = true;
     casks = [
       "calibre"
+      "elektron-overbridge"
       "firefox"
       "ghostty"
       "libreoffice"
