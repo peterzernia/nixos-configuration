@@ -41,10 +41,6 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
-  services.udev.packages = with pkgs; [
-    android-udev-rules
-  ];
-
   systemd.services.hd-idle = {
     description = "External HD spin down daemon";
     wantedBy = [ "multi-user.target" ];
