@@ -34,6 +34,7 @@
     firewall = {
       allowedTCPPorts = [
         8384 # syncthing
+        2345 # freshrss
       ];
     };
   };
@@ -73,6 +74,22 @@
       DO_NOT_TRACK = "True";
       SCARF_NO_ANALYTICS = "True";
     };
+  };
+
+  services.freshrss = {
+    enable = true;
+    authType = "none";
+    virtualHost = "localhost";
+    baseUrl = "0.0.0.0";
+  };
+
+  services.nginx.virtualHosts."localhost" = {
+    listen = [
+      {
+        addr = "0.0.0.0";
+        port = 2345;
+      }
+    ];
   };
 
   nix.settings.download-buffer-size = 524288000;
