@@ -12,12 +12,16 @@
     };
 
     # darwin dependencies
+    nixpkgs-darwin = {
+      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    };
     darwin = {
       url = "github:lnl7/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     home-manager-darwin = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "darwin";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
   };
 

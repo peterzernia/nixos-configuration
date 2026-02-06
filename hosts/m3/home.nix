@@ -77,7 +77,7 @@
       goose
       go-mockery
       mockgen
-      poetry
+      # poetry
       python313
       oapi-codegen
       ruff
@@ -89,7 +89,7 @@
       darktable
       discord
       firefox-devedition
-      google-chrome
+      # google-chrome
       insomnia
       iterm2
       raycast
