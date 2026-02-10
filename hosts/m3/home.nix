@@ -57,6 +57,7 @@
       kind
       litecli
       mariadb
+      mirrord
       mycli
       pgcli
       postgresql
