@@ -33,6 +33,7 @@
       "scroll-reverser"
       "signal"
       "steam"
+      "touchdesigner"
       "tunnelblick"
       "vlc"
     ];
