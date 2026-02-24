@@ -88,6 +88,7 @@
 
       # apps
       audacity
+      codex
       darktable
       discord
       firefox-devedition
