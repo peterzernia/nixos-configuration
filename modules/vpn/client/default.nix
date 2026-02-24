@@ -5,7 +5,7 @@
     wg-quick = {
       interfaces = {
         wg0 = {
-          configFile = "/home/peter/nixos/modules/vpn/NL-357.conf";
+          configFile = "/home/peter/nixos/modules/vpn/NL-409.conf";
           autostart = true;
         };
       };
