@@ -21,19 +21,13 @@
   homebrew = {
     enable = true;
     casks = [
-      "calibre"
-      "elektron-overbridge"
       "firefox"
       "ghostty"
       "libreoffice"
       "microsoft-teams"
       "proton-drive"
       "protonvpn"
-      "rekordbox"
       "scroll-reverser"
-      "signal"
-      "steam"
-      "touchdesigner"
       "tunnelblick"
       "vlc"
     ];
@@ -51,7 +45,6 @@
       # cli
       awscli2
       buf
-      ffmpeg
       k9s
       kubectl
       kubectx
@@ -87,22 +80,12 @@
       uv
 
       # apps
-      audacity
       codex
-      darktable
-      discord
       firefox-devedition
       # google-chrome
       insomnia
-      iterm2
       raycast
       spotify
-
-      # tmp
-      flac
-      ghostscript
-      gnupg
-      tesseract
     ];
 
     xdg.configFile.skhd = {
