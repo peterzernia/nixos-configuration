@@ -28,6 +28,13 @@
   outputs = { self, nixpkgs, ... }@inputs:
     {
       darwinConfigurations = {
+        m1 = inputs.darwin.lib.darwinSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/m1
+            inputs.home-manager-darwin.darwinModules.default
+          ];
+        };
         m3 = inputs.darwin.lib.darwinSystem {
           specialArgs = { inherit inputs; };
           modules = [
